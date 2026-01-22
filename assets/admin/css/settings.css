@@ -1,0 +1,66 @@
+#thrail-wp-settings-body {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 3fr;
+    max-width: 900px;
+}
+#thrail-wp-settings-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+#thrail-wp-settings-menus-list > li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+#thrail-wp-settings-menus-list > li.active {
+    font-weight: bold;
+}
+#thrail-wp-settings-submenus-list {
+    display: flex;
+}
+.thrail-wp-settings-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+#thrail-wp-settings-header > h2 {
+    font-size: 24px;
+}
+#thrail-wp-settings-content-label > h3 {
+    font-size: 20px;
+}
+#thrail-wp-settings-submenus-list > li {
+    border-right: 1px solid #ddd;
+    padding: 0 10px;
+}
+#thrail-wp-settings-submenus-list > li:first-child {
+    padding-left: 0px;
+}
+#thrail-wp-settings-submenus-list > li:last-child {
+    border-right: 0px;
+}
+#thrail-wp-settings-submenus-list > li > a {
+    text-decoration: none;
+}
+#thrail-wp-settings-submenus-list > li.active > a {
+    font-weight: bold;
+}
+#thrail-wp-settings-content-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.thrail-wp-settings-section-heading {
+    font-size: 16px;
+}
+.thrail-wp-field-wrapper {
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+.thrail-wp-field-wrapper label {
+    display: inline-block;
+    width: 100px;
+}

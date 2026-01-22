@@ -1,0 +1,52 @@
+<?php
+namespace ThrailWP\Controllers\Common;
+
+defined( 'ABSPATH' ) || exit;
+
+use ThrailWP\Traits\Hook;
+use ThrailWP\Traits\Asset;
+
+class Init {
+
+	use Hook;
+	use Asset;
+
+	/**
+	 * Constructor to add all hooks.
+	 */
+	public function __construct() {
+		$this->action( 'wp_head', array( $this, 'modal' ) );
+		$this->action( 'admin_head', array( $this, 'modal' ) );
+		$this->action( 'wp_enqueue_scripts', array( $this, 'add_assets' ) );
+		$this->action( 'admin_enqueue_scripts', array( $this, 'add_assets' ) );
+	}
+
+	public function modal() {
+		echo '
+		<div id="thrail-wp-modal" style="display: none">
+			<img id="thrail-wp-modal-loader" src="' . esc_attr( THRAILWP_ASSETS_URL . 'common/img/loader.gif' ) . '" />
+		</div>';
+	}
+
+	public function add_assets() {
+		global $current_screen;
+
+		if ( isset( $current_screen->base ) && strpos( $current_screen->base, 'thrail-wp' ) !== false || ! is_admin() ) {
+
+			$this->enqueue_script(
+				'tailwind-css',
+				THRAILWP_PLUGIN_URL . 'spa/build/tailwind.bundle.js'
+			);
+
+			$this->enqueue_script(
+				'thrail-wp_common',
+				THRAILWP_ASSETS_URL . 'common/js/init.js'
+			);
+
+			$this->enqueue_style(
+				'thrail-wp_common',
+				THRAILWP_ASSETS_URL . 'common/css/init.css'
+			);
+		}
+	}
+}
