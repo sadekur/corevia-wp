@@ -2,6 +2,7 @@
 1. Update composer `composer update`
 2. Install Node packages `npm install`
 3. Build `npm run build`
+3. Watch `npm run watch`
 
 ## Available Commands
 
