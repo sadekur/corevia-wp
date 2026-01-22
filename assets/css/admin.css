@@ -1,57 +1,3 @@
-#thrail-wp_tabs {
-}
-#thrail-wp_tabs ul {
-    display: inline-flex;
-    gap: 20px;
-}
-#thrail-wp_tabs ul li {
-    border-bottom: 2px solid #ccc;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-}
-#thrail-wp_tabs ul li.active {
-    border-bottom: 2px solid #448bff;
-}
-#thrail-wp_tabs a {
-    text-decoration: none;
-}
-#thrail-wp_help .thrail-wp-help-tab {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    background: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.thrail-wp-documentation {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.thrail-wp-help-heading a {
-    text-decoration: none;
-}
-.thrail-wp-help-heading a .dashicons {
-    margin-right: 5px;
-}
-#thrail-wp_help .thrail-wp-help-link {
-    display: block;
-    text-decoration: none;
-    background: #fff;
-    text-align: center;
-    width: 200px;
-    margin: 10px 0;
-    padding: 17px;
-    border-radius: 5px;
-    font-size: 17px;
-    color: #4256b2;
-    border: 1px solid #4256b2;
-    margin-bottom: 20px;
-    transition: .4s;
-}
-#thrail-wp_help .thrail-wp-help-link:hover {
-    background: #4256b2;
-    color: #fff;
-}
 #thrail-wp-modal {
     position: fixed;
     background: #c8c8c859;
@@ -67,20 +13,4 @@
 }
 #thrail-wp-modal-loader {
     position: absolute;
-}
-#cx-row-thrail-wp_tools-report .cx-field-wrap {
-	position: relative;
-}
-#thrail-wp_report-copy {
-    position: absolute;
-    padding: 3px;
-    line-height: 0px;
-    right: 10px;
-    bottom: 20px;
-}
-#cx-posts {
-    list-style: inside;
-}
-.thrail-wp_loader {
-    text-align: center;
 }

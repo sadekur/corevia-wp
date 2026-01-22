@@ -6,31 +6,12 @@
  * Author: Codexpert, Inc
  * Author URI: https://codexpert.io
  * Version: 0.9
- * Requires at least: 5.0
- * Tested up to: 6.3
- * Requires PHP: 7.4
  * Text Domain: thrail-wp
  * Domain Path: /languages
- *
- * ThrailWP is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * any later version.
- *
- * ThrailWP is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
  */
 
 namespace Codexpert\ThrailWP;
-
-use Codexpert\Plugin\Widget;
 use Codexpert\Plugin\Notice;
-use Pluggable\Plugin\License;
-use Pluggable\Marketing\Survey;
-use Pluggable\Marketing\Feature;
-use Pluggable\Marketing\Deactivator;
 
 /**
  * if accessed directly, exit.
@@ -45,13 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author Codexpert <hi@codexpert.io>
  */
 final class Plugin {
-	
-	/**
-	 * The Plugin
-	 * 
-	 * @access private
-	 */
-	private $plugin;
 	
 	/**
 	 * Plugin instance
@@ -70,7 +44,6 @@ final class Plugin {
 	 * @since 0.9
 	 */
 	private function __construct() {
-		
 		/**
 		 * Includes required files
 		 */
@@ -85,11 +58,6 @@ final class Plugin {
 		 * Runs actual hooks
 		 */
 		$this->hook();
-
-		/**
-		 * Plugin is loaded
-		 */
-		do_action( 'thrail-wp_loaded' );
 	}
 
 	/**
@@ -101,8 +69,6 @@ final class Plugin {
 	 * @uses psr-4
 	 */
 	private function include() {
-		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-		require_once( dirname( __FILE__ ) . '/inc/functions.php' );
 		require_once( dirname( __FILE__ ) . '/vendor/autoload.php' );
 	}
 
@@ -121,9 +87,9 @@ final class Plugin {
 		 * 
 		 * @since 0.9
 		 */
-		define( 'THRAILWP_FILE', __FILE__ );
-		define( 'THRAILWP_DIR', dirname( THRAILWP_FILE ) );
-		define( 'THRAILWP_ASSETS', plugins_url( 'assets', THRAILWP_FILE ) );
+		define( 'THRAILWP', __FILE__ );
+		define( 'THRAILWP_DIR', dirname( THRAILWP ) );
+		define( 'THRAILWP_ASSET', plugins_url( 'assets', THRAILWP ) );
 		define( 'THRAILWP_DEBUG', apply_filters( 'thrail-wp_debug', true ) );
 
 		/**
@@ -132,23 +98,15 @@ final class Plugin {
 		 * @since 0.9
 		 * @var $plugin
 		 */
-		$this->plugin					= get_plugin_data( THRAILWP_FILE );
-		$this->plugin['basename']		= plugin_basename( THRAILWP_FILE );
-		$this->plugin['file']			= THRAILWP_FILE;
-		$this->plugin['doc_id']			= 1960;
-		$this->plugin['server']			= 'https://my.pluggable.io';
-		$this->plugin['icon']			= THRAILWP_ASSETS . '/img/icon.png';
-		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'thrail-wp' ) ];
+		$this->plugin					= get_plugin_data( THRAILWP );
+		$this->plugin['basename']		= plugin_basename( THRAILWP );
+		$this->plugin['file']			= THRAILWP;
+		$this->plugin['server']			= apply_filters( 'thrail-wp_server', 'https://codexpert.io/dashboard' );
+		$this->plugin['min_php']		= '5.6';
+		$this->plugin['min_wp']			= '4.0';
+		$this->plugin['icon']			= THRAILWP_ASSET . '/img/icon.png';
+		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => 'WooCommerce' ];
 		
-		/**
-		 * The license
-		 */
-		$this->plugin['license']		= new License( $this->plugin );
-
-		/**
-		 * Set plugin data instance
-		 */
-		define( 'THRAILWP', apply_filters( 'thrail-wp_instance', $this->plugin ) );
 	}
 
 	/**
@@ -171,47 +129,20 @@ final class Plugin {
 		if( is_admin() ) :
 
 			/**
-			 * The installer
-			 */
-			$installer = new App\Installer();
-			$installer->activate( 'install' );
-			$installer->deactivate( 'uninstall' );
-			$installer->action( 'admin_footer', 'update' );
-
-			/**
 			 * Admin facing hooks
 			 */
-			$admin = new App\Admin();
+			$admin = new App\Admin( $this->plugin );
+			$admin->activate( 'install' );
 			$admin->action( 'admin_footer', 'modal' );
 			$admin->action( 'plugins_loaded', 'i18n' );
-			$admin->action( 'admin_menu', 'admin_menu' );
 			$admin->action( 'admin_enqueue_scripts', 'enqueue_scripts' );
-			$admin->filter( "plugin_action_links_{$this->plugin['basename']}", 'action_links' );
-			$admin->filter( 'plugin_row_meta', 'plugin_row_meta', 10, 2 );
-			$admin->action( 'save_post', 'update_cache', 10, 3 );
 			$admin->action( 'admin_footer_text', 'footer_text' );
-
-			/**
-			 * The setup wizard
-			 */
-			$wizard = new App\Wizard();
-			$wizard->action( 'plugins_loaded', 'render' );
-			$wizard->filter( "plugin_action_links_{$this->plugin['basename']}", 'action_links' );
 
 			/**
 			 * Settings related hooks
 			 */
-			$settings = new App\Settings();
+			$settings = new App\Settings( $this->plugin );
 			$settings->action( 'plugins_loaded', 'init_menu' );
-
-			/**
-			 * Blog posts from Codexpert blog
-			 * 
-			 * @package Codexpert\Plugin
-			 * 
-			 * @author Codexpert <hi@codexpert.io>
-			 */
-			$widget = new Widget();
 
 			/**
 			 * Renders different notices
@@ -222,70 +153,42 @@ final class Plugin {
 			 */
 			$notice = new Notice( $this->plugin );
 
-			/**
-			 * Asks to participate in a survey
-			 * 
-			 * @package Pluggable\Marketing
-			 * 
-			 * @author Pluggable <hi@pluggable.io>
-			 */
-			$survey = new Survey( $this->plugin );
-
-			/**
-			 * Shows a popup window asking why a user is deactivating the plugin
-			 * 
-			 * @package Pluggable\Marketing
-			 * 
-			 * @author Pluggable <hi@pluggable.io>
-			 */
-			$deactivator = new Deactivator( $this->plugin );
-
-			/**
-			 * Alters featured plugins
-			 * 
-			 * @package Pluggable\Marketing
-			 * 
-			 * @author Pluggable <hi@pluggable.io>
-			 */
-			$feature = new Feature( $this->plugin );
-
 		else : // ! is_admin() ?
 
 			/**
 			 * Front facing hooks
 			 */
-			$front = new App\Front();
+			$front = new App\Front( $this->plugin );
 			$front->action( 'wp_head', 'head' );
 			$front->action( 'wp_footer', 'modal' );
 			$front->action( 'wp_enqueue_scripts', 'enqueue_scripts' );
-			$front->action( 'admin_bar_menu', 'add_admin_bar', 70 );
 
 			/**
 			 * Shortcode related hooks
 			 */
-			$shortcode = new App\Shortcode();
-			$shortcode->register( 'my-shortcode', 'my_shortcode' );
-
-			/**
-			 * Custom REST API related hooks
-			 */
-			$api = new App\API();
-			$api->action( 'rest_api_init', 'register_endpoints' );
+			$shortcode = new App\Shortcode( $this->plugin );
+			$shortcode->register( 'my_shortcode', 'my_shortcode' );
 
 		endif;
+
+		/**
+		 * Cron facing hooks
+		 */
+		$cron = new App\Cron( $this->plugin );
+		$cron->activate( 'install' );
+		$cron->deactivate( 'uninstall' );
 
 		/**
 		 * Common hooks
 		 *
 		 * Executes on both the admin area and front area
 		 */
-		$common = new App\Common();
+		$common = new App\Common( $this->plugin );
 
 		/**
 		 * AJAX related hooks
 		 */
-		$ajax = new App\AJAX();
-		$ajax->priv( 'some-route', 'some_callback' );
+		$ajax = new App\AJAX( $this->plugin );
 	}
 
 	/**
