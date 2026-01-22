@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Thrail WP
  * Description: A Simple Plugin
- * Plugin URI: https://codexpert.io
+ * Plugin URI: https://sadekurrahman.net
  * Author: Codexpert, Inc
- * Author URI: https://codexpert.io
+ * Author URI: https://sadekurrahman.net
  * Version: 0.9
  * Text Domain: thrail-wp
  * Domain Path: /languages
