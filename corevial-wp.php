@@ -120,10 +120,10 @@ final class Plugin {
 		 * 
 		 * @since 0.9
 		 */
-		define( 'THRAILWP_FILE', __FILE__ );
-		define( 'THRAILWP_DIR', dirname( THRAILWP_FILE ) );
-		define( 'THRAILWP_ASSETS', plugins_url( 'assets', THRAILWP_FILE ) );
-		define( 'THRAILWP_DEBUG', apply_filters( 'thrail-wp_debug', true ) );
+		define( 'BASE_FILE', __FILE__ );
+		define( 'BASE_DIR', dirname( BASE_FILE ) );
+		define( 'BASE_ASSETS', plugins_url( 'assets', BASE_FILE ) );
+		define( 'BASE_DEBUG', apply_filters( 'base-wp_debug', true ) );
 
 		/**
 		 * The plugin data
@@ -131,12 +131,12 @@ final class Plugin {
 		 * @since 0.9
 		 * @var $plugin
 		 */
-		$this->plugin					= get_plugin_data( THRAILWP_FILE );
-		$this->plugin['basename']		= plugin_basename( THRAILWP_FILE );
-		$this->plugin['file']			= THRAILWP_FILE;
+		$this->plugin					= get_plugin_data( BASE_FILE );
+		$this->plugin['basename']		= plugin_basename( BASE_FILE );
+		$this->plugin['file']			= BASE_FILE;
 		$this->plugin['doc_id']			= 1960;
 		$this->plugin['server']			= 'https://api.corevia.com';
-		$this->plugin['icon']			= THRAILWP_ASSETS . '/img/icon.png';
+		$this->plugin['icon']			= BASE_ASSETS . '/img/icon.png';
 		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'thrail-wp' ) ];
 
 		/**

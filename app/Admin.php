@@ -40,24 +40,24 @@ class Admin extends Base {
 	 * Internationalization
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'thrail-wp', false, THRAILWP_DIR . '/languages/' );
+		load_plugin_textdomain( 'thrail-wp', false, BASE_DIR . '/languages/' );
 	}
 
 	/**
 	 * Enqueue JavaScripts and stylesheets
 	 */
 	public function enqueue_scripts() {
-		$min = defined( 'THRAILWP_DEBUG' ) && THRAILWP_DEBUG ? '' : '.min';
+		$min = defined( 'BASE_DEBUG' ) && BASE_DEBUG ? '' : '.min';
 		
-		wp_enqueue_style( $this->slug, plugins_url( "/assets/css/admin{$min}.css", THRAILWP_FILE ), '', $this->version, 'all' );
-		wp_enqueue_script( $this->slug, plugins_url( "/assets/js/admin{$min}.js", THRAILWP_FILE ), [ 'jquery' ], $this->version, true );
+		wp_enqueue_style( $this->slug, plugins_url( "/assets/css/admin{$min}.css", BASE_FILE ), '', $this->version, 'all' );
+		wp_enqueue_script( $this->slug, plugins_url( "/assets/js/admin{$min}.js", BASE_FILE ), [ 'jquery' ], $this->version, true );
 
-	    wp_enqueue_script( "{$this->slug}-react", plugins_url( 'spa/admin/build/index.js', THRAILWP_FILE ), [ 'wp-element' ], '1.0.0', true );
+	    wp_enqueue_script( "{$this->slug}-react", plugins_url( 'spa/admin/build/index.js', BASE_FILE ), [ 'wp-element' ], '1.0.0', true );
 
 	    $localized = [
 	    	'homeurl'		=> get_bloginfo( 'url' ),
 	    	'adminurl'		=> admin_url(),
-	    	'asseturl'		=> THRAILWP_ASSETS,
+	    	'asseturl'		=> BASE_ASSETS,
 	    	'ajaxurl'		=> admin_url( 'admin-ajax.php' ),
 	    	'_wpnonce'		=> wp_create_nonce(),
 	    	'api_base'		=> get_rest_url(),
@@ -134,7 +134,7 @@ class Admin extends Base {
 	public function modal() {
 		echo '
 		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( THRAILWP_ASSETS . '/img/loader.gif' ) . '" />
+			<img id="thrail-wp-modal-loader" src="' . esc_attr( BASE_ASSETS . '/img/loader.gif' ) . '" />
 		</div>';
 	}
 }

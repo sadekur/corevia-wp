@@ -68,7 +68,7 @@ class Wizard extends Base {
 			],
 			'three'	=> [
 				'label'		=> __( 'Three' ),
-				'template'	=> THRAILWP_DIR . '/views/setup-wizard/step-3.php',
+				'template'	=> BASE_DIR . '/views/setup-wizard/step-3.php',
 				'action'	=> [ $this, 'save_three' ],
 			],
 			'four'	=> [

@@ -532,7 +532,7 @@ class Settings extends Base {
 					'icon'      => 'dashicons-editor-table',
 					// 'color'		=> '#28c9ee',
 					'hide_form'	=> true,
-					'template'  => THRAILWP_DIR . '/views/settings/table.php',
+					'template'  => BASE_DIR . '/views/settings/table.php',
 				],
 			],
 		];

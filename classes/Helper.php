@@ -129,7 +129,7 @@ class Helper {
 		$overwrite_template_dir = apply_filters( 'thrailwp_template_overwrite_dir', get_stylesheet_directory() . '/thrail-wp/', $slug, $base, $args );
 		
 		// default template directory
-		$plugin_template_dir = THRAILWP_DIR . "/{$base}/";
+		$plugin_template_dir = BASE_DIR . "/{$base}/";
 
 		// full path of a template file in plugin directory
 		$plugin_template_path =  $plugin_template_dir . $slug . '.php';
