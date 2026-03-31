@@ -7,6 +7,7 @@
     ],
     "require": {
         "corevia/plugin": "dev-master",
+        "corevia/marketing": "dev-master",
         "wp-cli/wp-cli": "^2.5"
     },
     "autoload": {
