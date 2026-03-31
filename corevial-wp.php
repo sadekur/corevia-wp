@@ -142,7 +142,7 @@ final class Plugin {
 		/**
 		 * Set plugin data instance
 		 */
-		define( 'THRAILWP', apply_filters( 'base_instance', $this->plugin ) );
+		define( 'BASE', apply_filters( 'base_instance', $this->plugin ) );
 	}
 
 	/**

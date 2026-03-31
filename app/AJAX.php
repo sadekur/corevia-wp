@@ -29,7 +29,7 @@ class AJAX extends Base {
 	 * Constructor function
 	 */
 	public function __construct() {
-		$this->plugin	= THRAILWP;
+		$this->plugin	= BASE;
 		$this->slug		= $this->plugin['TextDomain'];
 		$this->name		= $this->plugin['Name'];
 		$this->version	= $this->plugin['Version'];

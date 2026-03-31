@@ -30,7 +30,7 @@ class Front extends Base {
 	 * Constructor function
 	 */
 	public function __construct() {
-		$this->plugin	= THRAILWP;
+		$this->plugin	= BASE;
 		$this->slug		= $this->plugin['TextDomain'];
 		$this->name		= $this->plugin['Name'];
 		$this->version	= $this->plugin['Version'];
@@ -69,7 +69,7 @@ class Front extends Base {
 			'rest_nonce'	=> wp_create_nonce( 'wp_rest' ),
 		];
 		
-		wp_localize_script( $this->slug, 'THRAILWP', apply_filters( "{$this->slug}-localized", $localized ) );
+		wp_localize_script( $this->slug, 'BASE', apply_filters( "{$this->slug}-localized", $localized ) );
 	}
 
 	public function modal() {

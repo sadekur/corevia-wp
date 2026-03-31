@@ -30,7 +30,7 @@ class Admin extends Base {
 	 * Constructor function
 	 */
 	public function __construct() {
-		$this->plugin	= THRAILWP;
+		$this->plugin	= BASE;
 		$this->slug		= $this->plugin['TextDomain'];
 		$this->name		= $this->plugin['Name'];
 		$this->version	= $this->plugin['Version'];
@@ -64,14 +64,14 @@ class Admin extends Base {
 	    	'rest_nonce'	=> wp_create_nonce( 'wp_rest' ),
 	    ];
 	    
-	    wp_localize_script( $this->slug, 'THRAILWP', apply_filters( "{$this->slug}-localized", $localized ) );
+	    wp_localize_script( $this->slug, 'BASE', apply_filters( "{$this->slug}-localized", $localized ) );
 	}
 
 	public function admin_menu() {
 
 		add_menu_page(
-			__( 'Thrail WP', 'base' ),
-			__( 'Thrail WP', 'base' ),
+			__( 'CorevialWP', 'base' ),
+			__( 'CorevialWP', 'base' ),
 			'manage_options',
 			'base',
 			function(){},
