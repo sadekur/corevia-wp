@@ -135,7 +135,7 @@ final class Plugin {
 		$this->plugin['basename']		= plugin_basename( THRAILWP_FILE );
 		$this->plugin['file']			= THRAILWP_FILE;
 		$this->plugin['doc_id']			= 1960;
-		$this->plugin['server']			= 'https://my.pluggable.io';
+		$this->plugin['server']			= 'https://api.corevia.com';
 		$this->plugin['icon']			= THRAILWP_ASSETS . '/img/icon.png';
 		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'thrail-wp' ) ];
 
@@ -219,27 +219,27 @@ final class Plugin {
 			/**
 			 * Asks to participate in a survey
 			 * 
-			 * @package Pluggable\Marketing
+			 * @package Corevia\Marketing
 			 * 
-			 * @author Pluggable <hi@pluggable.io>
+			 * @author Corevia <hi@codexpert.io>
 			 */
 			$survey = new Survey( $this->plugin );
 
 			/**
 			 * Shows a popup window asking why a user is deactivating the plugin
 			 * 
-			 * @package Pluggable\Marketing
+			 * @package Corevia\Marketing
 			 * 
-			 * @author Pluggable <hi@pluggable.io>
+			 * @author Corevia <hi@codexpert.io>
 			 */
 			$deactivator = new Deactivator( $this->plugin );
 
 			/**
 			 * Alters featured plugins
 			 * 
-			 * @package Pluggable\Marketing
+			 * @package Corevia\Marketing
 			 * 
-			 * @author Pluggable <hi@pluggable.io>
+			 * @author Corevia <hi@codexpert.io>
 			 */
 			$feature = new Feature( $this->plugin );
 
