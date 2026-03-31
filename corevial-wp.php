@@ -137,7 +137,7 @@ final class Plugin {
 		$this->plugin['doc_id']			= 1960;
 		$this->plugin['server']			= 'https://api.corevia.com';
 		$this->plugin['icon']			= BASE_ASSETS . '/img/icon.png';
-		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'thrail-wp' ) ];
+		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'base' ) ];
 
 		/**
 		 * Set plugin data instance

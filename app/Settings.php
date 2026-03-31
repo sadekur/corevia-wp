@@ -56,16 +56,16 @@ class Settings extends Base {
 			'sections'      => [
 				'thrail-wp_basic'	=> [
 					'id'        => 'thrail-wp_basic',
-					'label'     => __( 'Basic Settings', 'thrail-wp' ),
+					'label'     => __( 'Basic Settings', 'base' ),
 					'icon'      => 'dashicons-admin-tools',
 					// 'color'		=> '#4c3f93',
 					'sticky'	=> false,
 					'fields'    => [
 						'sample_text' => [
 							'id'        => 'sample_text',
-							'label'     => __( 'Text Field', 'thrail-wp' ),
+							'label'     => __( 'Text Field', 'base' ),
 							'type'      => 'text',
-							'desc'      => __( 'This is a text field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a text field.', 'base' ),
 							// 'class'     => '',
 							'default'   => 'Hello World!',
 							'readonly'  => false, // true|false
@@ -73,9 +73,9 @@ class Settings extends Base {
 						],
 						'sample_number' => [
 							'id'      => 'sample_number',
-							'label'     => __( 'Number Field', 'thrail-wp' ),
+							'label'     => __( 'Number Field', 'base' ),
 							'type'      => 'number',
-							'desc'      => __( 'This is a number field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a number field.', 'base' ),
 							// 'class'     => '',
 							'default'   => 10,
 							'readonly'  => false, // true|false
@@ -83,9 +83,9 @@ class Settings extends Base {
 						],
 						'sample_email' => [
 							'id'      => 'sample_email',
-							'label'     => __( 'Email Field', 'thrail-wp' ),
+							'label'     => __( 'Email Field', 'base' ),
 							'type'      => 'email',
-							'desc'      => __( 'This is an email field.', 'thrail-wp' ),
+							'desc'      => __( 'This is an email field.', 'base' ),
 							// 'class'     => '',
 							'default'   => 'john@doe.com',
 							'readonly'  => false, // true|false
@@ -93,9 +93,9 @@ class Settings extends Base {
 						],
 						'sample_url' => [
 							'id'      => 'sample_url',
-							'label'     => __( 'URL Field', 'thrail-wp' ),
+							'label'     => __( 'URL Field', 'base' ),
 							'type'      => 'url',
-							'desc'      => __( 'This is a url field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a url field.', 'base' ),
 							// 'class'     => '',
 							'default'   => 'https://johndoe.com',
 							'readonly'  => false, // true|false
@@ -103,9 +103,9 @@ class Settings extends Base {
 						],
 						'sample_password' => [
 							'id'      => 'sample_password',
-							'label'     => __( 'Password Field', 'thrail-wp' ),
+							'label'     => __( 'Password Field', 'base' ),
 							'type'      => 'password',
-							'desc'      => __( 'This is a password field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a password field.', 'base' ),
 							// 'class'     => '',
 							'readonly'  => false, // true|false
 							'disabled'  => false, // true|false
@@ -113,9 +113,9 @@ class Settings extends Base {
 						],
 						'sample_textarea' => [
 							'id'      => 'sample_textarea',
-							'label'     => __( 'Textarea Field', 'thrail-wp' ),
+							'label'     => __( 'Textarea Field', 'base' ),
 							'type'      => 'textarea',
-							'desc'      => __( 'This is a textarea field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a textarea field.', 'base' ),
 							// 'class'     => '',
 							'columns'   => 24,
 							'rows'      => 5,
@@ -125,9 +125,9 @@ class Settings extends Base {
 						],
 						'sample_radio' => [
 							'id'      => 'sample_radio',
-							'label'     => __( 'Radio Field', 'thrail-wp' ),
+							'label'     => __( 'Radio Field', 'base' ),
 							'type'      => 'radio',
-							'desc'      => __( 'This is a radio field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a radio field.', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'item_1'  => 'Item One',
@@ -139,9 +139,9 @@ class Settings extends Base {
 						],
 						'sample_select' => [
 							'id'      => 'sample_select',
-							'label'     => __( 'Select Field', 'thrail-wp' ),
+							'label'     => __( 'Select Field', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'This is a select field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a select field.', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -154,9 +154,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect' => [
 							'id'      => 'sample_multiselect',
-							'label'     => __( 'Multi-select Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-select Field', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'This is a multiselect field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multiselect field.', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -169,18 +169,18 @@ class Settings extends Base {
 						],
 						'sample_checkbox' => [
 							'id'      => 'sample_checkbox',
-							'label'     => __( 'Checkbox Field', 'thrail-wp' ),
+							'label'     => __( 'Checkbox Field', 'base' ),
 							'type'      => 'checkbox',
-							'desc'      => __( 'This is a checkbox field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a checkbox field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'on'
 						],
 						'sample_multicheck' => [
 							'id'      => 'sample_multicheck',
-							'label'     => __( 'Multi-check Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-check Field', 'base' ),
 							'type'      => 'checkbox',
-							'desc'      => __( 'This is a multi-check field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multi-check field.', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -193,18 +193,18 @@ class Settings extends Base {
 						],
 						'sample_switch' => [
 							'id'      => 'sample_switch',
-							'label'     => __( 'Switch Field', 'thrail-wp' ),
+							'label'     => __( 'Switch Field', 'base' ),
 							'type'      => 'switch',
-							'desc'      => __( 'This is a switch field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a switch field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'on'
 						],
 						'sample_multiswitch' => [
 							'id'      => 'sample_multiswitch',
-							'label'     => __( 'Multi-switch Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-switch Field', 'base' ),
 							'type'      => 'switch',
-							'desc'      => __( 'This is a multi-switch field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multi-switch field.', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -217,9 +217,9 @@ class Settings extends Base {
 						],
 						'sample_range' => [
 							'id'      => 'sample_range',
-							'label'     => __( 'Range Field', 'thrail-wp' ),
+							'label'     => __( 'Range Field', 'base' ),
 							'type'      => 'range',
-							'desc'      => __( 'This is a range field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a range field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'min'		=> 0,
@@ -229,35 +229,35 @@ class Settings extends Base {
 						],
 						'sample_date' => [
 							'id'      => 'sample_date',
-							'label'     => __( 'Date Field', 'thrail-wp' ),
+							'label'     => __( 'Date Field', 'base' ),
 							'type'      => 'date',
-							'desc'      => __( 'This is a date field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a date field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => '1971-12-16',
 						],
 						'sample_time' => [
 							'id'      => 'sample_time',
-							'label'     => __( 'Time Field', 'thrail-wp' ),
+							'label'     => __( 'Time Field', 'base' ),
 							'type'      => 'time',
-							'desc'      => __( 'This is a time field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a time field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => '15:45',
 						],
 						'sample_color' => [
 							'id'      => 'sample_color',
-							'label'     => __( 'Color Field', 'thrail-wp' ),
+							'label'     => __( 'Color Field', 'base' ),
 							'type'      => 'color',
-							'desc'      => __( 'This is a color field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a color field.', 'base' ),
 							// 'class'     => '',
 							// 'default'   => '#f0f'
 						],
 						'sample_wysiwyg' => [
 							'id'      => 'sample_wysiwyg',
-							'label'     => __( 'WYSIWYG Field', 'thrail-wp' ),
+							'label'     => __( 'WYSIWYG Field', 'base' ),
 							'type'      => 'wysiwyg',
-							'desc'      => __( 'This is a wysiwyg field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a wysiwyg field.', 'base' ),
 							// 'class'     => '',
 							'width'     => '100%',
 							'rows'      => 5,
@@ -270,9 +270,9 @@ class Settings extends Base {
 							'id'      => 'sample_file',
 							'label'     => __( 'File Field' ),
 							'type'      => 'file',
-							'upload_button'     => __( 'Choose File', 'thrail-wp' ),
-							'select_button'     => __( 'Select File', 'thrail-wp' ),
-							'desc'      => __( 'This is a file field.', 'thrail-wp' ),
+							'upload_button'     => __( 'Choose File', 'base' ),
+							'select_button'     => __( 'Select File', 'base' ),
+							'desc'      => __( 'This is a file field.', 'base' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'http://example.com/sample/file.txt'
@@ -281,20 +281,20 @@ class Settings extends Base {
 				],
 				'thrail-wp_advanced'	=> [
 					'id'        => 'thrail-wp_advanced',
-					'label'     => __( 'Advanced Settings', 'thrail-wp' ),
+					'label'     => __( 'Advanced Settings', 'base' ),
 					'icon'      => 'dashicons-admin-generic',
 					// 'color'		=> '#d30c5c',
 					'sticky'	=> false,
 					'fields'    => [
 						'sample_select_disabled' => [
 							'id'		=> 'sample_select_disabled',
-							'label'     => __( 'Select with disabled', 'thrail-wp' ),
+							'label'     => __( 'Select with disabled', 'base' ),
 							'type'      => 'select',
 							'options'   => [
-								'option_1'	=> __( 'Option 1', 'thrail-wp' ),
-								'option_2'	=> __( 'Option 2', 'thrail-wp' ),
-								'option_3'	=> __( 'Option 3', 'thrail-wp' ),
-								'option_4'	=> __( 'Option 4', 'thrail-wp' ),
+								'option_1'	=> __( 'Option 1', 'base' ),
+								'option_2'	=> __( 'Option 2', 'base' ),
+								'option_3'	=> __( 'Option 3', 'base' ),
+								'option_4'	=> __( 'Option 4', 'base' ),
 							],
 							'default'   => 'option_3',
 							'disabled'  => [ 'option_2', 'option_4' ], // true|false
@@ -303,9 +303,9 @@ class Settings extends Base {
 						],
 						'sample_select3' => [
 							'id'      => 'sample_select3',
-							'label'     => __( 'Select with Chosen', 'thrail-wp' ),
+							'label'     => __( 'Select with Chosen', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'base' ),
 							// 'class'     => '',
 							'options'   => Helper::get_posts( [ 'post_type' => 'page' ], false, true ),
 							'default'   => 2,
@@ -315,9 +315,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect3' => [
 							'id'      => 'sample_multiselect3',
-							'label'     => __( 'Multi-select with Chosen', 'thrail-wp' ),
+							'label'     => __( 'Multi-select with Chosen', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -331,9 +331,9 @@ class Settings extends Base {
 						],
 						'sample_select2' => [
 							'id'      => 'sample_select2',
-							'label'     => __( 'Select with Select2', 'thrail-wp' ),
+							'label'     => __( 'Select with Select2', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -347,9 +347,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect2' => [
 							'id'      => 'sample_multiselect2',
-							'label'     => __( 'Multi-select with Select2', 'thrail-wp' ),
+							'label'     => __( 'Multi-select with Select2', 'base' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'base' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -365,11 +365,11 @@ class Settings extends Base {
 							'id'      => 'sample_group',
 							'label'     => __( 'Field Group' ),
 							'type'      => 'group',
-							'desc'      => __( 'A group of fields.', 'thrail-wp' ),
+							'desc'      => __( 'A group of fields.', 'base' ),
 							'items'     => [
 								'sample_group_select1' => [
 									'id'      => 'sample_group_select1',
-									'label'     => __( 'First Item', 'thrail-wp' ),
+									'label'     => __( 'First Item', 'base' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -380,7 +380,7 @@ class Settings extends Base {
 								],
 								'sample_group_select2' => [
 									'id'      => 'sample_group_select2',
-									'label'     => __( 'Second Item', 'thrail-wp' ),
+									'label'     => __( 'Second Item', 'base' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -391,7 +391,7 @@ class Settings extends Base {
 								],
 								'sample_group_select3' => [
 									'id'      => 'sample_group_select3',
-									'label'     => __( 'Third Item', 'thrail-wp' ),
+									'label'     => __( 'Third Item', 'base' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -404,14 +404,14 @@ class Settings extends Base {
 						],
 						'sample_conditional' => [
 							'id'      => 'sample_conditional',
-							'label'     => __( 'Conditional Field', 'thrail-wp' ),
+							'label'     => __( 'Conditional Field', 'base' ),
 							'type'      => 'select',
 							'options'   => [
 								'option_1'  => 'Option One',
 								'option_2'  => 'Option Two',
 								'option_3'  => 'Option Three',
 							],
-							'desc'      => __( 'Shows up if the third option in the  \'Field Group\' above is set as \'Option Two\'', 'thrail-wp' ),
+							'desc'      => __( 'Shows up if the third option in the  \'Field Group\' above is set as \'Option Two\'', 'base' ),
 							'default'   => 'option_2',
 							'condition'	=> [
 								'key'		=> 'sample_group_select3',
@@ -426,17 +426,17 @@ class Settings extends Base {
 							'items'		=> [
 								'text_repeat' => [
 									'id'		=> 'text_repeat',
-									'label'		=> __( 'Repeat Text Field', 'thrail-wp' ),
+									'label'		=> __( 'Repeat Text Field', 'base' ),
 									'type'		=> 'text',
-									'placeholder'=> __( 'Repeat Text', 'thrail-wp' ),
-									'desc'		=> __( 'This field will be repeated.', 'thrail-wp' ),
+									'placeholder'=> __( 'Repeat Text', 'base' ),
+									'desc'		=> __( 'This field will be repeated.', 'base' ),
 								],
 								'number_repeat' => [
 									'id'		=> 'number_repeat',
-									'label'		=> __( 'Repeat Number Field', 'thrail-wp' ),
+									'label'		=> __( 'Repeat Number Field', 'base' ),
 									'type'		=> 'number',
-									'placeholder'=> __( 'Repeat Number', 'thrail-wp' ),
-									'desc'		=> __( 'This field will be repeated.', 'thrail-wp' ),
+									'placeholder'=> __( 'Repeat Number', 'base' ),
+									'desc'		=> __( 'This field will be repeated.', 'base' ),
 								],
 							]
 						],
@@ -447,13 +447,13 @@ class Settings extends Base {
 							'items'     => [
 								'sample_tab1' => [
 									'id'      => 'sample_tab1',
-									'label'     => __( 'First Tab', 'thrail-wp' ),
+									'label'     => __( 'First Tab', 'base' ),
 									'fields'    => [
 										'sample_tab1_email' => [
 											'id'      => 'sample_tab1_email',
-											'label'     => __( 'Tab Email Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Email Field', 'base' ),
 											'type'      => 'email',
-											'desc'      => __( 'This is an email field.', 'thrail-wp' ),
+											'desc'      => __( 'This is an email field.', 'base' ),
 											// 'class'     => '',
 											'default'   => 'john@doe.com',
 											'readonly'  => false, // true|false
@@ -461,9 +461,9 @@ class Settings extends Base {
 										],
 										'sample_tab1_url' => [
 											'id'      => 'sample_tab1_url',
-											'label'     => __( 'Tab URL Field', 'thrail-wp' ),
+											'label'     => __( 'Tab URL Field', 'base' ),
 											'type'      => 'url',
-											'desc'      => __( 'This is a url field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a url field.', 'base' ),
 											// 'class'     => '',
 											'default'   => 'https://johndoe.com',
 											'readonly'  => false, // true|false
@@ -473,13 +473,13 @@ class Settings extends Base {
 								],
 								'sample_tab2' => [
 									'id'      => 'sample_tab2',
-									'label'     => __( 'Second Tab', 'thrail-wp' ),
+									'label'     => __( 'Second Tab', 'base' ),
 									'fields'    => [
 										'sample_tab2_text' => [
 											'id'        => 'sample_tab2_text',
-											'label'     => __( 'Tab Text Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Text Field', 'base' ),
 											'type'      => 'text',
-											'desc'      => __( 'This is a text field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a text field.', 'base' ),
 											// 'class'     => '',
 											'default'   => 'Hello World!',
 											'readonly'  => false, // true|false
@@ -487,9 +487,9 @@ class Settings extends Base {
 										],
 										'sample_tab2_number' => [
 											'id'      => 'sample_tab2_number',
-											'label'     => __( 'Tab Number Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Number Field', 'base' ),
 											'type'      => 'number',
-											'desc'      => __( 'This is a number field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a number field.', 'base' ),
 											// 'class'     => '',
 											'default'   => 10,
 											'readonly'  => false, // true|false
@@ -503,20 +503,20 @@ class Settings extends Base {
 				],
 				'thrail-wp_tools'	=> [
 					'id'        => 'thrail-wp_tools',
-					'label'     => __( 'Tools', 'thrail-wp' ),
+					'label'     => __( 'Tools', 'base' ),
 					'icon'      => 'dashicons-hammer',
 					'sticky'	=> false,
 					'fields'    => [
 						'enable_debug' => [
 							'id'      	=> 'enable_debug',
-							'label'     => __( 'Enable Debug', 'thrail-wp' ),
+							'label'     => __( 'Enable Debug', 'base' ),
 							'type'      => 'switch',
-							'desc'      => __( 'Enable this if you face any CSS or JS related issues.', 'thrail-wp' ),
+							'desc'      => __( 'Enable this if you face any CSS or JS related issues.', 'base' ),
 							'disabled'  => false,
 						],
 						'report' => [
 							'id'      => 'report',
-							'label'     => __( 'Report', 'thrail-wp' ),
+							'label'     => __( 'Report', 'base' ),
 							'type'      => 'textarea',
 							'desc'     	=> '<button id="thrail-wp_report-copy" class="button button-primary"><span class="dashicons dashicons-admin-page"></span></button>',
 							'columns'   => 24,
@@ -528,7 +528,7 @@ class Settings extends Base {
 				],
 				'thrail-wp_table' => [
 					'id'        => 'thrail-wp_table',
-					'label'     => __( 'Table', 'thrail-wp' ),
+					'label'     => __( 'Table', 'base' ),
 					'icon'      => 'dashicons-editor-table',
 					// 'color'		=> '#28c9ee',
 					'hide_form'	=> true,

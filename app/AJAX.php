@@ -39,7 +39,7 @@ class AJAX extends Base {
 		
 		$response = [
 			'status'	=> 0,
-			'message'	=> __( 'Unauthorized', 'thrail-wp' ),
+			'message'	=> __( 'Unauthorized', 'base' ),
 		];
 
 		if( ! wp_verify_nonce( $_POST['_wpnonce'] ) ) {

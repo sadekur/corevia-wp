@@ -40,7 +40,7 @@ class Admin extends Base {
 	 * Internationalization
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'thrail-wp', false, BASE_DIR . '/languages/' );
+		load_plugin_textdomain( 'base', false, BASE_DIR . '/languages/' );
 	}
 
 	/**
@@ -70,34 +70,34 @@ class Admin extends Base {
 	public function admin_menu() {
 
 		add_menu_page(
-			__( 'Thrail WP', 'thrail-wp' ),
-			__( 'Thrail WP', 'thrail-wp' ),
+			__( 'Thrail WP', 'base' ),
+			__( 'Thrail WP', 'base' ),
 			'manage_options',
-			'thrail-wp',
+			'base',
 			function(){},
 			'dashicons-wordpress',
 			25
 		);
 
 		add_submenu_page(
-			'thrail-wp',
-			__( 'Help', 'thrail-wp' ),
-			__( 'Help', 'thrail-wp' ),
+			'base',
+			__( 'Help', 'base' ),
+			__( 'Help', 'base' ),
 			'manage_options',
-			'thrail-wp-help',
+			'base-help',
 			function() {
-				printf( '<div id="thrail-wp_help"><p>%s</p></div>', __( 'Loading..', 'thrail-wp' ) );
+				printf( '<div id="thrail-wp_help"><p>%s</p></div>', __( 'Loading..', 'base' ) );
 			}
 		);
 
 		add_submenu_page(
-			'thrail-wp',
-			__( 'License', 'thrail-wp' ),
-			__( 'License', 'thrail-wp' ),
+			'base',
+			__( 'License', 'base' ),
+			__( 'License', 'base' ),
 			'manage_options',
-			'thrail-wp-license',
+			'base-license',
 			function() {
-				printf( '<div id="thrail-wp_license"><p>%s</p></div>', __( 'Loading..', 'thrail-wp' ) );
+				printf( '<div id="thrail-wp_license"><p>%s</p></div>', __( 'Loading..', 'base' ) );
 			}
 		);
 	}
@@ -106,7 +106,7 @@ class Admin extends Base {
 		$this->admin_url = admin_url( 'admin.php' );
 
 		$new_links = [
-			'settings'	=> sprintf( '<a href="%1$s">' . __( 'Settings', 'thrail-wp' ) . '</a>', add_query_arg( 'page', $this->slug, $this->admin_url ) )
+			'settings'	=> sprintf( '<a href="%1$s">' . __( 'Settings', 'base' ) . '</a>', add_query_arg( 'page', $this->slug, $this->admin_url ) )
 		];
 		
 		return array_merge( $new_links, $links );
@@ -115,7 +115,7 @@ class Admin extends Base {
 	public function plugin_row_meta( $plugin_meta, $plugin_file ) {
 		
 		if ( $this->plugin['basename'] === $plugin_file ) {
-			$plugin_meta['help'] = '<a href="https://help.codexpert.io/" target="_blank" class="cx-help">' . __( 'Help', 'thrail-wp' ) . '</a>';
+			$plugin_meta['help'] = '<a href="https://help.codexpert.io/" target="_blank" class="cx-help">' . __( 'Help', 'base' ) . '</a>';
 		}
 
 		return $plugin_meta;
@@ -128,13 +128,13 @@ class Admin extends Base {
 	public function footer_text( $text ) {
 		if( get_current_screen()->parent_base != $this->slug ) return $text;
 
-		return sprintf( __( 'If you like <strong>%1$s</strong>, please <a href="%2$s" target="_blank">leave us a %3$s rating</a> on WordPress.org! It\'d motivate and inspire us to make the plugin even better!', 'thrail-wp' ), $this->name, "https://wordpress.org/support/plugin/{$this->slug}/reviews/?filter=5#new-post", '⭐⭐⭐⭐⭐' );
+		return sprintf( __( 'If you like <strong>%1$s</strong>, please <a href="%2$s" target="_blank">leave us a %3$s rating</a> on WordPress.org! It\'d motivate and inspire us to make the plugin even better!', 'base' ), $this->name, "https://wordpress.org/support/plugin/{$this->slug}/reviews/?filter=5#new-post", '⭐⭐⭐⭐⭐' );
 	}
 
 	public function modal() {
 		echo '
-		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( BASE_ASSETS . '/img/loader.gif' ) . '" />
+		<div id="base-modal" style="display: none">
+			<img id="base-modal-loader" src="' . esc_attr( BASE_ASSETS . '/img/loader.gif' ) . '" />
 		</div>';
 	}
 }

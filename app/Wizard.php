@@ -40,7 +40,7 @@ class Wizard extends Base {
 		$this->admin_url = admin_url( 'admin.php' );
 
 		$new_links = [
-			'wizard'	=> sprintf( '<a href="%1$s">%2$s</a>', add_query_arg( [ 'page' => "{$this->slug}_setup" ], $this->admin_url ), __( 'Setup Wizard', 'thrail-wp' ) )
+			'wizard'	=> sprintf( '<a href="%1$s">%2$s</a>', add_query_arg( [ 'page' => "{$this->slug}_setup" ], $this->admin_url ), __( 'Setup Wizard', 'base' ) )
 		];
 		
 		return array_merge( $new_links, $links );
@@ -73,7 +73,7 @@ class Wizard extends Base {
 			],
 			'four'	=> [
 				'label'		=> __( 'Four' ),
-				'content'	=> __( 'This is Step-4 of the setup wizard! Added as a string!', 'thrail-wp' ),
+				'content'	=> __( 'This is Step-4 of the setup wizard! Added as a string!', 'base' ),
 				'action'	=> [ $this, 'save_three' ],
 				'redirect'	=> add_query_arg( [ 'page' => "{$this->slug}" ], admin_url( 'admin.php' ) )
 			],
@@ -83,14 +83,14 @@ class Wizard extends Base {
 	}
 
 	public function callback_step_1() {
-		_e( 'This is Step-1 of the setup wizard. Generated from a callback method!', 'thrail-wp' );
+		_e( 'This is Step-1 of the setup wizard. Generated from a callback method!', 'base' );
 		?>
 		<input type="date" name="date">
 		<?php
 	}
 
 	public function callback_step_2() {
-		_e( 'This is Step-2 of the setup wizard. Generated from a callback method!', 'thrail-wp' );
+		_e( 'This is Step-2 of the setup wizard. Generated from a callback method!', 'base' );
 		?>
 		<input type="time" name="time">
 		<?php

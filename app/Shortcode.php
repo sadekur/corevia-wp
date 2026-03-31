@@ -36,6 +36,6 @@ class Shortcode extends Base {
     }
 
     public function my_shortcode() {
-        return __( 'My Shortcode', 'thrail-wp' );
+        return __( 'My Shortcode', 'base' );
     }
 }

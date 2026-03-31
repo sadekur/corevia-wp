@@ -74,8 +74,8 @@ class Front extends Base {
 
 	public function modal() {
 		echo '
-		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( BASE_ASSETS . '/img/loader.gif' ) . '" />
+		<div id="base-modal" style="display: none">
+			<img id="base-modal-loader" src="' . esc_attr( BASE_ASSETS . '/img/loader.gif' ) . '" />
 		</div>';
 
 		?>

@@ -115,7 +115,7 @@ class Helper {
 	/**
 	 * Includes a template file resides in /views diretory
 	 *
-	 * It'll look into /thrail-wp directory of your active theme
+	 * It'll look into /base directory of your active theme
 	 * first. if not found, default template will be used.
 	 * can be overwriten with thrail-wp_template_overwrite_dir hook
 	 *
@@ -126,7 +126,7 @@ class Helper {
 	public static function get_template( $slug, $base = 'views', $args = null ) {
 
 		// templates can be placed in this directory
-		$overwrite_template_dir = apply_filters( 'thrailwp_template_overwrite_dir', get_stylesheet_directory() . '/thrail-wp/', $slug, $base, $args );
+		$overwrite_template_dir = apply_filters( 'thrailwp_template_overwrite_dir', get_stylesheet_directory() . '/base/', $slug, $base, $args );
 		
 		// default template directory
 		$plugin_template_dir = BASE_DIR . "/{$base}/";
@@ -150,7 +150,7 @@ class Helper {
 			return ob_get_clean();
 		}
 		else {
-			return __( 'Template not found!', 'thrail-wp' );
+			return __( 'Template not found!', 'base' );
 		}
 	}
 }
