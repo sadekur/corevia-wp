@@ -27,10 +27,9 @@ namespace Corevia\Base;
 
 use Corevia\Plugin\Widget;
 use Corevia\Plugin\Notice;
-use Pluggable\Plugin\License;
-use Pluggable\Marketing\Survey;
-use Pluggable\Marketing\Feature;
-use Pluggable\Marketing\Deactivator;
+use Corevia\Marketing\Survey;
+use Corevia\Marketing\Feature;
+use Corevia\Marketing\Deactivator;
 
 /**
  * if accessed directly, exit.
@@ -139,11 +138,6 @@ final class Plugin {
 		$this->plugin['server']			= 'https://my.pluggable.io';
 		$this->plugin['icon']			= THRAILWP_ASSETS . '/img/icon.png';
 		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => __( 'WooCommerce', 'thrail-wp' ) ];
-		
-		/**
-		 * The license
-		 */
-		$this->plugin['license']		= new License( $this->plugin );
 
 		/**
 		 * Set plugin data instance
