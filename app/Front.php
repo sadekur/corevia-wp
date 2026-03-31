@@ -1,8 +1,8 @@
 <?php
-namespace Codexpert\ThrailWP\App;
+namespace Corevia\Base\App;
 
-use Codexpert\Plugin\Base;
-use Codexpert\ThrailWP\Helper;
+use Corevia\Plugin\Base;
+use Corevia\Base\Helper;
 
 /**
  * if accessed directly, exit.
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Front
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Front extends Base {
 

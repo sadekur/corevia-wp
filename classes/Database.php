@@ -1,5 +1,5 @@
 <?php
-namespace Codexpert\ThrailWP;
+namespace Corevia\Base;
 
 /**
  * if accessed directly, exit.
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Database
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Database {
 

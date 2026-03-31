@@ -1,7 +1,7 @@
 <?php
-namespace Codexpert\ThrailWP\App;
+namespace Corevia\Base\App;
 
-use Codexpert\Plugin\Base;
+use Corevia\Plugin\Base;
 
 /**
  * if accessed directly, exit.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Common
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Common extends Base {
 

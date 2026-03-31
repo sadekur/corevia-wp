@@ -1,8 +1,8 @@
 {
     "authors": [
         {
-            "name": "Codexpert",
-            "email": "hi@codexpert.io"
+            "name": "Corevia",
+            "email": "shadekur.rahman60@gmail.com"
         }
     ],
     "require": {
@@ -11,9 +11,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Codexpert\\ThrailWP\\" : "classes/",
-            "Codexpert\\ThrailWP\\App\\" : "app/",
-            "Codexpert\\ThrailWP\\API\\" : "api/"
+            "Corevia\\Base\\" : "classes/",
+            "Corevia\\Base\\App\\" : "app/",
+            "Corevia\\Base\\API\\" : "api/"
         },
         "files": []
     }

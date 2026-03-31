@@ -23,10 +23,10 @@
  * GNU General Public License for more details.
  */
 
-namespace Codexpert\ThrailWP;
+namespace Corevia\Base;
 
-use Codexpert\Plugin\Widget;
-use Codexpert\Plugin\Notice;
+use Corevia\Plugin\Widget;
+use Corevia\Plugin\Notice;
 use Pluggable\Plugin\License;
 use Pluggable\Marketing\Survey;
 use Pluggable\Marketing\Feature;
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main class for the plugin
  * @package Plugin
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 final class Plugin {
 	
@@ -205,20 +205,20 @@ final class Plugin {
 			$settings->action( 'plugins_loaded', 'init_menu' );
 
 			/**
-			 * Blog posts from Codexpert blog
+			 * Blog posts from Corevia blog
 			 * 
-			 * @package Codexpert\Plugin
+			 * @package Corevia\Plugin
 			 * 
-			 * @author Codexpert <hi@codexpert.io>
+			 * @author Corevia <hi@codexpert.io>
 			 */
 			$widget = new Widget();
 
 			/**
 			 * Renders different notices
 			 * 
-			 * @package Codexpert\Plugin
+			 * @package Corevia\Plugin
 			 * 
-			 * @author Codexpert <hi@codexpert.io>
+			 * @author Corevia <hi@codexpert.io>
 			 */
 			$notice = new Notice( $this->plugin );
 

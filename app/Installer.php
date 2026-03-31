@@ -1,8 +1,8 @@
 <?php
-namespace Codexpert\ThrailWP\App;
+namespace Corevia\Base\App;
 
-use Codexpert\Plugin\Base;
-use Codexpert\ThrailWP\Database;
+use Corevia\Plugin\Base;
+use Corevia\Base\Database;
 
 /**
  * if accessed directly, exit.
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Installer
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Installer extends Base {
 

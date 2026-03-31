@@ -1,14 +1,14 @@
 <?php
-namespace Codexpert\ThrailWP\App;
+namespace Corevia\Base\App;
 
-use Codexpert\ThrailWP\Helper;
-use Codexpert\Plugin\Base;
-use Codexpert\Plugin\Settings as Settings_API;
+use Corevia\Base\Helper;
+use Corevia\Plugin\Base;
+use Corevia\Plugin\Settings as Settings_API;
 
 /**
  * @package Plugin
  * @subpackage Settings
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Settings extends Base {
 

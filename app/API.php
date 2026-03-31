@@ -1,9 +1,9 @@
 <?php
-namespace Codexpert\ThrailWP\App;
+namespace Corevia\Base\App;
 
-use Codexpert\Plugin\Base;
-use Codexpert\ThrailWP\API\User;
-use Codexpert\ThrailWP\API\Option;
+use Corevia\Plugin\Base;
+use Corevia\Base\API\User;
+use Corevia\Base\API\Option;
 
 /**
  * if accessed directly, exit.
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Common
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class API extends Base {
 

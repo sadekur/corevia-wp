@@ -1,5 +1,5 @@
 <?php
-namespace Codexpert\ThrailWP\API;
+namespace Corevia\Base\API;
 
 /**
  * if accessed directly, exit.
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage API
- * @author Codexpert <hi@codexpert.io>
+ * @author Corevia <hi@codexpert.io>
  */
 class Option {
 	
