@@ -1,23 +1,23 @@
 <?php
 /**
- * Plugin Name: Thrail WP
- * Description: A Simple Plugin
+ * Plugin Name: CorevialWP
+ * Description: A Simple Broilerplate for WordPress Plugin Development.
  * Plugin URI: https://sadekurrahman.net
- * Author: Codexpert, Inc
+ * Author: Corevial, Inc
  * Author URI: https://sadekurrahman.net
  * Version: 0.9
  * Requires at least: 5.0
  * Tested up to: 6.3
  * Requires PHP: 7.4
- * Text Domain: thrail-wp
+ * Text Domain: corevial-wp
  * Domain Path: /languages
  *
- * ThrailWP is free software: you can redistribute it and/or modify
+ * CorevialWP is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * ThrailWP is distributed in the hope that it will be useful,
+ * CorevialWP is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
