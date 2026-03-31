@@ -10,7 +10,7 @@ pipelines:
             - composer
           script:
             - apt-get update && apt-get install -y subversion rsync
-            - svn --non-interactive --trust-server-cert checkout https://plugins.svn.wordpress.org/thrail-wp/ /tmp/wordpress-svn
+            - svn --non-interactive --trust-server-cert checkout https://plugins.svn.wordpress.org/base/ /tmp/wordpress-svn
             - rsync -av --exclude=".svn" --exclude=".git" --exclude="bitbucket-pipelines.yml" ./ /tmp/wordpress-svn/trunk/
             - cd /tmp/wordpress-svn
             - svn add * --force
@@ -21,4 +21,4 @@ pipelines:
             - svn commit --message "Deploy v0.9 from Bitbucket" --username $WP_ORG_USERNAME --password $WP_ORG_PASSWORD
             - cd /tmp
             - rm -rf /tmp/wordpress-svn/.git
-            - svn copy https://plugins.svn.wordpress.org/thrail-wp/trunk https://plugins.svn.wordpress.org/thrail-wp/tags/0.9 -m "Create new tag 0.9" --username $WP_ORG_USERNAME --password $WP_ORG_PASSWORD
+            - svn copy https://plugins.svn.wordpress.org/base/trunk https://plugins.svn.wordpress.org/base/tags/0.9 -m "Create new tag 0.9" --username $WP_ORG_USERNAME --password $WP_ORG_PASSWORD

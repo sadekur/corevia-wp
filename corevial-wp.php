@@ -88,7 +88,7 @@ final class Plugin {
 		/**
 		 * Plugin is loaded
 		 */
-		do_action( 'thrail-wp_loaded' );
+		do_action( 'base_loaded' );
 	}
 
 	/**
@@ -142,7 +142,7 @@ final class Plugin {
 		/**
 		 * Set plugin data instance
 		 */
-		define( 'THRAILWP', apply_filters( 'thrail-wp_instance', $this->plugin ) );
+		define( 'THRAILWP', apply_filters( 'base_instance', $this->plugin ) );
 	}
 
 	/**

@@ -54,8 +54,8 @@ class Settings extends Base {
 			// 'position'   => 25,
 			// 'topnav'	=> true,
 			'sections'      => [
-				'thrail-wp_basic'	=> [
-					'id'        => 'thrail-wp_basic',
+				'base_basic'	=> [
+					'id'        => 'base_basic',
 					'label'     => __( 'Basic Settings', 'base' ),
 					'icon'      => 'dashicons-admin-tools',
 					// 'color'		=> '#4c3f93',
@@ -279,8 +279,8 @@ class Settings extends Base {
 						],
 					]
 				],
-				'thrail-wp_advanced'	=> [
-					'id'        => 'thrail-wp_advanced',
+				'base_advanced'	=> [
+					'id'        => 'base_advanced',
 					'label'     => __( 'Advanced Settings', 'base' ),
 					'icon'      => 'dashicons-admin-generic',
 					// 'color'		=> '#d30c5c',
@@ -501,8 +501,8 @@ class Settings extends Base {
 						],
 					]
 				],
-				'thrail-wp_tools'	=> [
-					'id'        => 'thrail-wp_tools',
+				'base_tools'	=> [
+					'id'        => 'base_tools',
 					'label'     => __( 'Tools', 'base' ),
 					'icon'      => 'dashicons-hammer',
 					'sticky'	=> false,
@@ -518,7 +518,7 @@ class Settings extends Base {
 							'id'      => 'report',
 							'label'     => __( 'Report', 'base' ),
 							'type'      => 'textarea',
-							'desc'     	=> '<button id="thrail-wp_report-copy" class="button button-primary"><span class="dashicons dashicons-admin-page"></span></button>',
+							'desc'     	=> '<button id="base_report-copy" class="button button-primary"><span class="dashicons dashicons-admin-page"></span></button>',
 							'columns'   => 24,
 							'rows'      => 10,
 							'default'   => json_encode( $site_config, JSON_PRETTY_PRINT ),
@@ -526,8 +526,8 @@ class Settings extends Base {
 						],
 					]
 				],
-				'thrail-wp_table' => [
-					'id'        => 'thrail-wp_table',
+				'base_table' => [
+					'id'        => 'base_table',
 					'label'     => __( 'Table', 'base' ),
 					'icon'      => 'dashicons-editor-table',
 					// 'color'		=> '#28c9ee',

@@ -4,7 +4,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
     exit;
 }
 
-$deletable_options = [ 'thrail-wp_version', 'thrail-wp_install_time', 'thrail-wp_docs_json', 'codexpert-blog-json' ];
+$deletable_options = [ 'base_version', 'base_install_time', 'base_docs_json', 'codexpert-blog-json' ];
 foreach ( $deletable_options as $option ) {
     delete_option( $option );
 }

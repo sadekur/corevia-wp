@@ -117,7 +117,7 @@ class Helper {
 	 *
 	 * It'll look into /base directory of your active theme
 	 * first. if not found, default template will be used.
-	 * can be overwriten with thrail-wp_template_overwrite_dir hook
+	 * can be overwriten with base_template_overwrite_dir hook
 	 *
 	 * @param string $slug slug of template. Ex: template-slug.php
 	 * @param string $sub_dir sub-directory under base directory

@@ -9,9 +9,9 @@ let thrailwp_modal = ( show = true ) => {
 
 jQuery(function($){
 	
-	$('#thrail-wp_report-copy').click(function(e) {
+	$('#base_report-copy').click(function(e) {
 		e.preventDefault();
-		$('#thrail-wp_tools-report').select();
+		$('#base_tools-report').select();
 
 		try {
 			if( document.execCommand('copy') ){

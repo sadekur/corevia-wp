@@ -86,7 +86,7 @@ class Admin extends Base {
 			'manage_options',
 			'base-help',
 			function() {
-				printf( '<div id="thrail-wp_help"><p>%s</p></div>', __( 'Loading..', 'base' ) );
+				printf( '<div id="base_help"><p>%s</p></div>', __( 'Loading..', 'base' ) );
 			}
 		);
 
@@ -97,7 +97,7 @@ class Admin extends Base {
 			'manage_options',
 			'base-license',
 			function() {
-				printf( '<div id="thrail-wp_license"><p>%s</p></div>', __( 'Loading..', 'base' ) );
+				printf( '<div id="base_license"><p>%s</p></div>', __( 'Loading..', 'base' ) );
 			}
 		);
 	}
