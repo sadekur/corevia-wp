@@ -6,64 +6,114 @@ defined( 'ABSPATH' ) || exit;
 class Initializer {
 
 	/**
-	 * Initialize the plugin's components.
+	 * Instance
 	 */
-	public static function initialize() {
-		$initializer = new self();
+	private static $instance = null;
 
-		$initializer->load_admin_controllers();
-		$initializer->load_public_controllers();
-		$initializer->load_common_controllers();
+	/**
+	 * Get Instance (Singleton)
+	 */
+	public static function get_instance() {
+		if ( null === self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
 	}
 
 	/**
-	 * Initialize controllers for wp-admin.
+	 * Init Plugin
+	 */
+	public function init() {
+
+		do_action( 'coreviawp_before_initialize', $this );
+
+		$this->init_controllers();
+
+		do_action( 'coreviawp_after_initialize', $this );
+	}
+
+	/**
+	 * Load Controllers
+	 */
+	private function init_controllers() {
+
+		do_action( 'coreviawp_before_load_controllers' );
+
+		if ( is_admin() ) {
+			$this->load_admin_controllers();
+		}
+
+		if ( ! is_admin() ) {
+			$this->load_frontend_controllers();
+		}
+
+		$this->load_common_controllers();
+
+		do_action( 'coreviawp_after_load_controllers' );
+	}
+
+	/**
+	 * Admin Controllers
 	 */
 	private function load_admin_controllers() {
-		if ( is_admin() ) {
-			$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Admin/';
 
-			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
-				$class_name = basename( $file, '.php' );
-				$controller = "\\CoreviaWP\\Controllers\\Admin\\{$class_name}";
+		$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Admin/';
 
-				if ( class_exists( $controller ) ) {
-					new $controller();
-				}
+		if ( ! is_dir( $controller_dir ) ) return;
+
+		$controllers = glob( $controller_dir . '*.php' );
+		$controllers = apply_filters( 'coreviawp_admin_controllers', $controllers );
+
+		foreach ( $controllers as $file ) {
+			$class_name = basename( $file, '.php' );
+			$class = "\\CoreviaWP\\Controllers\\Admin\\{$class_name}";
+
+			if ( class_exists( $class ) ) {
+				new $class();
 			}
 		}
 	}
 
 	/**
-	 * Initialize controllers for public-facing parts of the site.
+	 * Frontend Controllers
 	 */
-	private function load_public_controllers() {
-		if ( ! is_admin() ) {
-			$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Front/';
+	private function load_frontend_controllers() {
 
-			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
-				$class_name = basename( $file, '.php' );
-				$controller = "\\CoreviaWP\\Controllers\\Front\\{$class_name}";
+		$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Front/';
 
-				if ( class_exists( $controller ) ) {
-					new $controller();
-				}
+		if ( ! is_dir( $controller_dir ) ) return;
+
+		$controllers = glob( $controller_dir . '*.php' );
+		$controllers = apply_filters( 'coreviawp_frontend_controllers', $controllers );
+
+		foreach ( $controllers as $file ) {
+			$class_name = basename( $file, '.php' );
+			$class = "\\CoreviaWP\\Controllers\\Front\\{$class_name}";
+
+			if ( class_exists( $class ) ) {
+				new $class();
 			}
 		}
 	}
 
 	/**
-	 * Initialize controllers that operate on both admin and public.
+	 * Common Controllers
 	 */
 	private function load_common_controllers() {
+
 		$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Common/';
 
-		foreach ( glob( $controller_dir . '*.php' ) as $file ) {
-			$class_name = basename( $file, '.php' );
-			$controller = "\\CoreviaWP\\Controllers\\Common\\{$class_name}";
+		if ( ! is_dir( $controller_dir ) ) return;
 
-			if ( class_exists( $controller ) ) {
-				new $controller();
+		$controllers = glob( $controller_dir . '*.php' );
+		$controllers = apply_filters( 'coreviawp_common_controllers', $controllers );
+
+		foreach ( $controllers as $file ) {
+			$class_name = basename( $file, '.php' );
+			$class = "\\CoreviaWP\\Controllers\\Common\\{$class_name}";
+
+			if ( class_exists( $class ) ) {
+				new $class();
 			}
 		}
 	}

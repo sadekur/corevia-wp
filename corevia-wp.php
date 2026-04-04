@@ -73,7 +73,15 @@ function coreviawp_activate() {
  * This action is triggered when all active plugins are fully loaded.
  * It sets the plugin's runtime environment and initializes hooks.
  */
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_initialize' );
-function coreviawp_initialize() {
-	Core\Initializer::initialize();
+// add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_initialize' );
+// function coreviawp_initialize() {
+// 	Core\Initializer::initialize();
+// }
+
+/**
+ * Init Plugin
+ */
+if ( class_exists( 'CoreviaWP\\Core\\Initializer' ) ) {
+	$init = Core\Initializer::get_instance();
+	$init->init();
 }
