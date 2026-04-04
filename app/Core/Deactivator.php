@@ -20,6 +20,6 @@ class Deactivator {
 	 * Remove the database version from the options table.
 	 */
 	protected function remove_db_version() {
-		delete_option( 'thrail-wp_db_version' );
+		delete_option( 'corevia-wp_db_version' );
 	}
 }

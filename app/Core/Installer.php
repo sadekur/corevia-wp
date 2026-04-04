@@ -25,7 +25,7 @@ class Installer {
 	 * @return bool
 	 */
 	protected function is_database_up_to_date() {
-		$installed_ver = get_option( 'thrail-wp_db_version' );
+		$installed_ver = get_option( 'corevia-wp_db_version' );
 		return version_compare( $installed_ver, COREVIAWP_VERSION, '=' );
 	}
 
@@ -64,6 +64,6 @@ class Installer {
 	 * Update or add the database version to the options table.
 	 */
 	protected function update_db_version() {
-		update_option( 'thrail-wp_db_version', COREVIAWP_VERSION );
+		update_option( 'corevia-wp_db_version', COREVIAWP_VERSION );
 	}
 }
