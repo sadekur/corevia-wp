@@ -49,12 +49,12 @@ function coreviawp_install() {
 /**
  * Register the deactivation hook.
  * This hook is triggered when the plugin is activated.
- * It uninstalls necessary database tables, sets initial seeds, 
+ * It deactivates necessary database tables, sets initial seeds, 
  * and checks database versions.
  */
-register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_uninstall' );
-function coreviawp_uninstall() {
-	Core\Uninstaller::uninstall();
+register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_deactivate' );
+function coreviawp_deactivate() {
+	Core\Deactivator::deactivate();
 }
 
 /**

@@ -5,15 +5,15 @@ defined( 'ABSPATH' ) || exit;
 
 use CoreviaWP\Models\Database;
 
-class Uninstaller {
+class Deactivator {
 
 	/**
-	 * Run installation routines.
+	 * Run deactivation routines.
 	 */
-	public static function uninstall() {
-		$uninstaller = new self();
+	public static function deactivate() {
+		$deactivater = new self();
 
-		$uninstaller->remove_db_version();
+		$deactivater->remove_db_version();
 	}
 
 	/**
