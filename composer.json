@@ -1,17 +1,18 @@
 {
-    "name": "thrail-wp/thrail-wp",
+    "name": "corevia-wp/corevia-wp",
     "description": "Ecommerce with WordPress made easy.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
-            "ThrailWP\\": "app/"
+            "CoreviaWP\\": "app/"
         },
         "files": ["app/Helpers/functions.php","app/Config/autoload.php"]
     },
     "authors": [
         {
-            "name": "Codexpert, Inc"
+            "name": "Sadekur Rahman",
+            "email": "shadekur.rahman60@gmail.com"
         }
     ],
     "minimum-stability": "stable",
