@@ -63,8 +63,8 @@ function coreviawp_uninstall() {
  * It sets up cron jobs, registers custom user roles, and performs other 
  * necessary activation tasks.
  */
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\thrailwp_activate' );
-function thrailwp_activate() {
+add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_activate' );
+function coreviawp_activate() {
 	Bootstrap\Activator::activate();
 }
 
