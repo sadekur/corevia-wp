@@ -1,4 +1,4 @@
-=== Thrail WP ===
+=== Corevia WP ===
 Contributors: codexpert
 Donate link: https://codexpert.io
 Tags: plugin, tags, go, here

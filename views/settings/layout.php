@@ -17,7 +17,7 @@ $saved_option = get_option( $option_key );
 <div id="thrail-wp-settings-wrap">
 	
 	<div id="thrail-wp-settings-header">
-		<h2><?php esc_html_e( 'Thrail WP', 'thrail-wp' ); ?></h2>
+		<h2><?php esc_html_e( 'Corevia WP', 'thrail-wp' ); ?></h2>
 	</div>
 
 	<div id="thrail-wp-settings-body">

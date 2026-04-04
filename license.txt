@@ -1,4 +1,4 @@
-Thrail WP - A Simple Plugin
+Corevia WP - A Simple Plugin
 
 Copyright 2015 by the contributors
 

@@ -50,8 +50,8 @@ class Menu {
 
 	public function register() {
 		$this->add_menu(
-			__( 'Thrail WP', 'thrail-wp' ),
-			__( 'Thrail WP', 'thrail-wp' ),
+			__( 'Corevia WP', 'thrail-wp' ),
+			__( 'Corevia WP', 'thrail-wp' ),
 			'manage_options',
 			'thrail-wp',
 			array( $this, 'callback_main_menu' ),
@@ -93,7 +93,7 @@ class Menu {
 				<h2>%1$s</h2>
 				<div id="thrail-wp_render">%2$s</div>
 			</div>',
-			'Thrail WP',
+			'Corevia WP',
 			__( 'Loading..', 'thrail-wp' )
 		);
 	}

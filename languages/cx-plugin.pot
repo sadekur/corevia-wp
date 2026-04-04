@@ -1,8 +1,8 @@
 # Copyright (C) 2024 Codexpert, Inc
-# This file is distributed under the same license as the Thrail WP plugin.
+# This file is distributed under the same license as the Corevia WP plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thrail WP 0.91\n"
+"Project-Id-Version: Corevia WP 0.91\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/thrail-wp\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: app/Controller/Menu.php:40
 #: app/Controller/Menu.php:41
-msgid "Thrail WP"
+msgid "Corevia WP"
 msgstr ""
 
 #. Plugin URI of the plugin
