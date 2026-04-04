@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Codexpert, Inc
+# Copyright (C) 2026 Sadekur Rahman
 # This file is distributed under the same license as the Corevia WP plugin.
 msgid ""
 msgstr ""
