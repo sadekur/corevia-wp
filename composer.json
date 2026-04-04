@@ -1,6 +1,6 @@
 {
     "name": "corevia-wp/corevia-wp",
-    "description": "Ecommerce with WordPress made easy.",
+    "description": "A WordPress plugin for Corevia WP.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "autoload": {

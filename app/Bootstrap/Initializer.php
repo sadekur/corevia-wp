@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Bootstrap;
+namespace CoreviaWP\Bootstrap;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -25,7 +25,7 @@ class Initializer {
 
 			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 				$class_name = basename( $file, '.php' );
-				$controller = "\\ThrailWP\\Controllers\\Admin\\{$class_name}";
+				$controller = "\\CoreviaWP\\Controllers\\Admin\\{$class_name}";
 
 				if ( class_exists( $controller ) ) {
 					new $controller();
@@ -43,7 +43,7 @@ class Initializer {
 
 			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 				$class_name = basename( $file, '.php' );
-				$controller = "\\ThrailWP\\Controllers\\Front\\{$class_name}";
+				$controller = "\\CoreviaWP\\Controllers\\Front\\{$class_name}";
 
 				if ( class_exists( $controller ) ) {
 					new $controller();
@@ -60,7 +60,7 @@ class Initializer {
 
 		foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 			$class_name = basename( $file, '.php' );
-			$controller = "\\ThrailWP\\Controllers\\Common\\{$class_name}";
+			$controller = "\\CoreviaWP\\Controllers\\Common\\{$class_name}";
 
 			if ( class_exists( $controller ) ) {
 				new $controller();

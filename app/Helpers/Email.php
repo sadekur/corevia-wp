@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Helpers;
+namespace CoreviaWP\Helpers;
 
 defined( 'ABSPATH' ) || exit;
 

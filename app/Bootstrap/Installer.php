@@ -1,9 +1,9 @@
 <?php
-namespace ThrailWP\Bootstrap;
+namespace CoreviaWP\Bootstrap;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Models\Database;
+use CoreviaWP\Models\Database;
 
 class Installer {
 

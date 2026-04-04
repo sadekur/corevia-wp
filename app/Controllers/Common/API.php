@@ -1,13 +1,13 @@
 <?php
-namespace ThrailWP\Controllers\Common;
+namespace CoreviaWP\Controllers\Common;
 
 defined( 'ABSPATH' ) || exit;
 
 use WP_REST_Server;
-use ThrailWP\API\Option;
-use ThrailWP\Traits\Hook;
-use ThrailWP\Traits\Auth;
-use ThrailWP\Traits\Rest;
+use CoreviaWP\API\Option;
+use CoreviaWP\Traits\Hook;
+use CoreviaWP\Traits\Auth;
+use CoreviaWP\Traits\Rest;
 
 class API {
 

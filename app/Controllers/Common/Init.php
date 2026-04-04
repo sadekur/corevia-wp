@@ -1,10 +1,10 @@
 <?php
-namespace ThrailWP\Controllers\Common;
+namespace CoreviaWP\Controllers\Common;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Traits\Hook;
-use ThrailWP\Traits\Asset;
+use CoreviaWP\Traits\Hook;
+use CoreviaWP\Traits\Asset;
 
 class Init {
 

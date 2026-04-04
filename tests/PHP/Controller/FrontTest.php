@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use ThrailWP\Controller\Front;
+use CoreviaWP\Controller\Front;
 
 class FrontTest extends TestCase {
 

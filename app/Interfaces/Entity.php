@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Interfaces;
+namespace CoreviaWP\Interfaces;
 
 defined( 'ABSPATH' ) || exit;
 

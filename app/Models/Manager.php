@@ -1,9 +1,9 @@
 <?php
-namespace ThrailWP\Models;
+namespace CoreviaWP\Models;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Abstracts\User;
+use CoreviaWP\Abstracts\User;
 
 /**
  * Concrete Manager Class

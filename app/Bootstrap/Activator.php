@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Bootstrap;
+namespace CoreviaWP\Bootstrap;
 
 defined( 'ABSPATH' ) || exit;
 

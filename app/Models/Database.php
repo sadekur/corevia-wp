@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Models;
+namespace CoreviaWP\Models;
 
 defined( 'ABSPATH' ) || exit;
 

@@ -1,9 +1,9 @@
 <?php
-namespace ThrailWP\Controllers\Front;
+namespace CoreviaWP\Controllers\Front;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Traits\Hook;
+use CoreviaWP\Traits\Hook;
 
 class Debug {
 

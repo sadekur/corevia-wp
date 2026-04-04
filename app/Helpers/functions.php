@@ -1,5 +1,5 @@
 <?php
-use ThrailWP\Helpers\Utility;
+use CoreviaWP\Helpers\Utility;
 
 /**
  * Returns the home URL of the WordPress site.
@@ -145,5 +145,5 @@ function thrailwp_get_field_factory( $type ) {
 		$type = 'WYSIWYG';
 	}
 
-	return '\\ThrailWP\\Helpers\\Field\\' . ucfirst( $type );
+	return '\\CoreviaWP\\Helpers\\Field\\' . ucfirst( $type );
 }

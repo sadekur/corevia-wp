@@ -1,9 +1,9 @@
 <?php
-namespace ThrailWP\API;
+namespace CoreviaWP\API;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Traits\Rest;
+use CoreviaWP\Traits\Rest;
 
 class Option {
 

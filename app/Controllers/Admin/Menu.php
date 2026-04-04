@@ -1,12 +1,12 @@
 <?php
-namespace ThrailWP\Controllers\Admin;
+namespace CoreviaWP\Controllers\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Traits\Hook;
-use ThrailWP\Traits\Asset;
-use ThrailWP\Traits\Menu as Menu_Trait;
-use ThrailWP\Helpers\Utility;
+use CoreviaWP\Traits\Hook;
+use CoreviaWP\Traits\Asset;
+use CoreviaWP\Traits\Menu as Menu_Trait;
+use CoreviaWP\Helpers\Utility;
 
 class Menu {
 

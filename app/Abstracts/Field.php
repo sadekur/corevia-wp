@@ -1,5 +1,5 @@
 <?php
-namespace ThrailWP\Abstracts;
+namespace CoreviaWP\Abstracts;
 
 defined( 'ABSPATH' ) || exit;
 

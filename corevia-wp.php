@@ -23,7 +23,7 @@
  * GNU General Public License for more details.
  */
 
-namespace coreviawp;
+namespace CoreviaWP;
 
 defined( 'ABSPATH' ) || exit;
 

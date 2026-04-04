@@ -1,9 +1,9 @@
 <?php
-namespace ThrailWP\Abstracts;
+namespace CoreviaWP\Abstracts;
 
 defined( 'ABSPATH' ) || exit;
 
-use ThrailWP\Models\Database;
+use CoreviaWP\Models\Database;
 
 /**
  * Class Meta

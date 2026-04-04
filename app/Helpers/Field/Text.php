@@ -1,7 +1,7 @@
 <?php
-namespace ThrailWP\Helpers\Field;
+namespace CoreviaWP\Helpers\Field;
 
-use ThrailWP\Abstracts\Field;
+use CoreviaWP\Abstracts\Field;
 
 defined( 'ABSPATH' ) || exit;
 
