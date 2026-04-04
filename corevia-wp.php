@@ -23,7 +23,7 @@
  * GNU General Public License for more details.
  */
 
-namespace ThrailWP;
+namespace coreviawp;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -73,7 +73,7 @@ function coreviawp_activate() {
  * This action is triggered when all active plugins are fully loaded.
  * It sets the plugin's runtime environment and initializes hooks.
  */
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\thrailwp_initialize' );
-function thrailwp_initialize() {
+add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_initialize' );
+function coreviawp_initialize() {
 	Bootstrap\Initializer::initialize();
 }
