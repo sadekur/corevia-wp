@@ -25,14 +25,14 @@ trait Menu {
 	 */
 	public function add_menu( $page_title, $menu_title, $capability, $menu_slug, $callback = '', $icon_url = '', $position = null ) {
 
-		global $thrailwp_menus;
+		global $coreviawp_menus;
 
-		if ( ! isset( $thrailwp_menus ) ) {
-			$thrailwp_menus = [];
+		if ( ! isset( $coreviawp_menus ) ) {
+			$coreviawp_menus = [];
 		}
 
-		if ( ! isset( $thrailwp_menus[ $menu_slug ] ) ) {
-			$thrailwp_menus[ $menu_slug ] = [];
+		if ( ! isset( $coreviawp_menus[ $menu_slug ] ) ) {
+			$coreviawp_menus[ $menu_slug ] = [];
 		}
 
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $callback, $icon_url, $position );
@@ -51,17 +51,17 @@ trait Menu {
 	 */
 	public function add_submenu( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $callback = '', $position = null ) {
 
-		global $thrailwp_menus;
+		global $coreviawp_menus;
 
-		if ( ! isset( $thrailwp_menus ) ) {
-			$thrailwp_menus = [];
+		if ( ! isset( $coreviawp_menus ) ) {
+			$coreviawp_menus = [];
 		}
 
-		if ( ! isset( $thrailwp_menus[ $parent_slug ] ) ) {
-			$thrailwp_menus[ $parent_slug ] = [];
+		if ( ! isset( $coreviawp_menus[ $parent_slug ] ) ) {
+			$coreviawp_menus[ $parent_slug ] = [];
 		}
 
-		$thrailwp_menus[ $parent_slug ][] = [
+		$coreviawp_menus[ $parent_slug ][] = [
 			'menu_slug' 	=> $menu_slug,
 			'menu_title' 	=> $menu_title
 		];

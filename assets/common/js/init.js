@@ -1,4 +1,4 @@
-const thrailwp_modal = ( show = true ) => {
+const coreviawp_modal = ( show = true ) => {
 	const modal = document.getElementById( 'corevia-wp-modal' );
 	if ( show ) {
 		modal.style.display = '';

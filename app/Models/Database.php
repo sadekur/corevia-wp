@@ -20,7 +20,7 @@ class Database {
 	 *
 	 * @var string
 	 */
-	protected $prefix = 'thrailwp_';
+	protected $prefix = 'coreviawp_';
 
 	/**
 	 * The full database table name including the prefix.

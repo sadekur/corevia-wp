@@ -11,7 +11,7 @@ trait Auth {
 	 * @return bool True if sandbox mode is enabled, false otherwise.
 	 */
 	protected function is_sandbox_mode() {
-		return defined( 'THRAILWP_SANDBOX' ) && THRAILWP_SANDBOX;
+		return defined( 'coreviawp_SANDBOX' ) && coreviawp_SANDBOX;
 	}
 
 	/**

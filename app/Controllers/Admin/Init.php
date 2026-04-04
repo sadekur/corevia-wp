@@ -25,13 +25,13 @@ class Init {
 			COREVIAWP_PLUGIN_URL . 'assets/admin/js/init.js'
 		);
 
-		global $thrailwp_menus;
+		global $coreviawp_menus;
 
 		$this->localize_script(
 			'corevia-wp_admin',
-			'THRAILWP_PLUGIN_ADMIN',
+			'coreviawp_PLUGIN_ADMIN',
 			array(
-				'menus'    => $thrailwp_menus,
+				'menus'    => $coreviawp_menus,
 				'api_base' => rest_url( 'corevia-wp/v1' ),
 				'nonce'    => wp_create_nonce( 'wp_rest' ),
 			)

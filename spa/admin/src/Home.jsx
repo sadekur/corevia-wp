@@ -10,7 +10,7 @@ const Home = () => {
 
 	useEffect(() => {
 		const fetch_data = async () => {
-			thrailwp_modal(true);
+			coreviawp_modal(true);
 			try {
 				const response = await fetch(`https://codexpert.io/wp-json/wp/v2/posts?_fields=title,link,featured_media&page=${currentPage}&per_page=${posts_per_page}`);
 				const data = await response.json();
@@ -23,7 +23,7 @@ const Home = () => {
 			} catch (error) {
 				console.error('Error fetching posts:', error);
 			} finally {
-				thrailwp_modal(false);
+				coreviawp_modal(false);
 			}
 		};
 		fetch_data();

@@ -1,7 +1,7 @@
 <?php
 use EasyCommerce\Helpers\Utility;
 
-$menus = thrailwp_settings_menus();
+$menus = coreviawp_settings_menus();
 
 $active_menu_id = isset( $_GET['menu'] ) && array_key_exists( $_GET['menu'], $menus ) ? sanitize_key( $_GET['menu'] ) : array_key_first( $menus );
 $active_menu    = $menus[ $active_menu_id ];
@@ -106,7 +106,7 @@ $saved_option = get_option( $option_key );
 
 						foreach ( $section['fields'] as $field ) {
 
-							if ( class_exists( $field_factory = thrailwp_get_field_factory( $field['type'] ) ) ) {
+							if ( class_exists( $field_factory = coreviawp_get_field_factory( $field['type'] ) ) ) {
 
 								if ( isset( $saved_option[ $field['id'] ] ) ) {
 									$field['value'] = $saved_option[ $field['id'] ];

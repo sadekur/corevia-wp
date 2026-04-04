@@ -2,17 +2,17 @@ jQuery(function($) {
 
 	$('.corevia-wp-settings-form').on('reset', function(e){
 		e.preventDefault();
-		thrailwp_modal();
+		coreviawp_modal();
 	    
 	    $.ajax({
-	    	url: `${THRAILWP_PLUGIN_ADMIN.api_base}/option`,
+	    	url: `${coreviawp_PLUGIN_ADMIN.api_base}/option`,
 	    	type: 'DELETE',
 	    	dataType: 'JSON',
 	    	data: {
 	    		key: $(this).data('option_key')
 	    	},
 	    	headers: {
-	    		'X-WP-Nonce': THRAILWP_PLUGIN_ADMIN.nonce,
+	    		'X-WP-Nonce': coreviawp_PLUGIN_ADMIN.nonce,
 	    	},
 	    	success: (resp) => {
 	    		console.log('Settings deleted:', resp);
@@ -20,14 +20,14 @@ jQuery(function($) {
 	    	},
 	    	error: (err) => {
 	    		console.error('Failed to delete settings', err);
-				thrailwp_modal(false);
+				coreviawp_modal(false);
 	    	},
 	    });
 	});
 
 	$('.corevia-wp-settings-form').submit(function(e){
 		e.preventDefault();
-		thrailwp_modal();
+		coreviawp_modal();
 
 		let formData = $(this).serializeArray();
 		let data = {};
@@ -45,7 +45,7 @@ jQuery(function($) {
 		});
 
 		$.ajax({
-			url: `${THRAILWP_PLUGIN_ADMIN.api_base}/option`,
+			url: `${coreviawp_PLUGIN_ADMIN.api_base}/option`,
 			type: 'POST',
 			dataType: 'JSON',
 			data: {
@@ -53,15 +53,15 @@ jQuery(function($) {
 				value: data
 			},
 			headers: {
-				'X-WP-Nonce': THRAILWP_PLUGIN_ADMIN.nonce,
+				'X-WP-Nonce': coreviawp_PLUGIN_ADMIN.nonce,
 			},
 			success: (resp) => {
 				console.log('Settings saved:', resp);
-				thrailwp_modal(false);
+				coreviawp_modal(false);
 			},
 			error: (err) => {
 				console.error('Failed to save settings', err);
-				thrailwp_modal(false);
+				coreviawp_modal(false);
 			},
 		});
 	});

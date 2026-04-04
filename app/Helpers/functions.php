@@ -9,16 +9,16 @@ use CoreviaWP\Helpers\Utility;
  *
  * @return string Home URL with optional path appended.
  */
-function thrailwp_home_url( $path = '', $blog_id = null ) {
+function coreviawp_home_url( $path = '', $blog_id = null ) {
 	return get_home_url( $blog_id, $path );
 }
 
-function thrailwp_settings_menus() {
+function coreviawp_settings_menus() {
 
 	$pages = Utility::get_posts( array( 'post_type' => 'page' ) );
 
 	return apply_filters(
-		'thrailwp_settings_menus',
+		'coreviawp_settings_menus',
 		array(
 			'general' => array(
 				'label'    => __( 'General', 'corevia-wp' ),
@@ -137,7 +137,7 @@ function thrailwp_settings_menus() {
 	);
 }
 
-function thrailwp_get_field_factory( $type ) {
+function coreviawp_get_field_factory( $type ) {
 
 	if ( $type == 'switch' ) {
 		$type = 'switcher';
