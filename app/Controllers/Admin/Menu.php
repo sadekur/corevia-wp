@@ -28,21 +28,21 @@ class Menu {
 		if ( strpos( $current_screen->base, 'corevia-wp' ) !== false ) {
 
 			$this->enqueue_script(
-				'thrail-wp_main-menu',
+				'corevia-wp_main-menu',
 				COREVIAWP_PLUGIN_URL . 'spa/build/admin.bundle.js',
-				array( 'wp-element', 'thrail-wp_common' )
+				array( 'wp-element', 'corevia-wp_common' )
 			);
 		}
 
 		if ( strpos( $current_screen->base, 'corevia-wp' ) !== false ) {
 
 			$this->enqueue_style(
-				'thrail-wp_settings',
+				'corevia-wp_settings',
 				COREVIAWP_ASSETS_URL . 'admin/css/settings.css'
 			);
 
 			$this->enqueue_script(
-				'thrail-wp_settings',
+				'corevia-wp_settings',
 				COREVIAWP_ASSETS_URL . 'admin/js/settings.js'
 			);
 		}
@@ -91,7 +91,7 @@ class Menu {
 		printf(
 			'<div class="wrap">
 				<h2>%1$s</h2>
-				<div id="thrail-wp_render">%2$s</div>
+				<div id="corevia-wp_render">%2$s</div>
 			</div>',
 			'Corevia WP',
 			__( 'Loading..', 'corevia-wp' )

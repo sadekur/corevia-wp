@@ -14,7 +14,7 @@ class Activator {
 		$activator->set_cron();
 
 		// Set a flag that indicates the plugin has been activated
-		update_option( 'thrail-wp_activated', true );
+		update_option( 'corevia-wp_activated', true );
 	}
 
 	public function set_cron() {

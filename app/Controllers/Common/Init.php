@@ -39,12 +39,12 @@ class Init {
 			);
 
 			$this->enqueue_script(
-				'thrail-wp_common',
+				'corevia-wp_common',
 				COREVIAWP_ASSETS_URL . 'common/js/init.js'
 			);
 
 			$this->enqueue_style(
-				'thrail-wp_common',
+				'corevia-wp_common',
 				COREVIAWP_ASSETS_URL . 'common/css/init.css'
 			);
 		}
