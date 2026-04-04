@@ -2,14 +2,14 @@
 /**
  * Plugin Name: Corevia WP
  * Plugin URI: https://sadekurrahman.net
- * Author: Codexpert, Inc
+ * Author: Sadekur Rahman
  * Author URI: https://sadekurrahman.net
  * Description: A Simple Plugin
  * Version: 0.9
  * Requires at least: 5.0
  * Tested up to: 6.5
  * Requires PHP: 7.4
- * Text Domain: thrail-wp
+ * Text Domain: corevia-wp
  * Domain Path: /languages
  *
  * Corevia WP is free software: you can redistribute it and/or modify
