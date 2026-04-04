@@ -43,7 +43,7 @@ require_once 'vendor/autoload.php';
  */
 register_activation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_install' );
 function coreviawp_install() {
-	Bootstrap\Installer::install();
+	Core\Installer::install();
 }
 
 /**
@@ -54,7 +54,7 @@ function coreviawp_install() {
  */
 register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_uninstall' );
 function coreviawp_uninstall() {
-	Bootstrap\Uninstaller::uninstall();
+	Core\Uninstaller::uninstall();
 }
 
 /**
@@ -65,7 +65,7 @@ function coreviawp_uninstall() {
  */
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_activate' );
 function coreviawp_activate() {
-	Bootstrap\Activator::activate();
+	Core\Activator::activate();
 }
 
 /**
@@ -75,5 +75,5 @@ function coreviawp_activate() {
  */
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\coreviawp_initialize' );
 function coreviawp_initialize() {
-	Bootstrap\Initializer::initialize();
+	Core\Initializer::initialize();
 }

@@ -1,5 +1,5 @@
 <?php
-namespace CoreviaWP\Bootstrap;
+namespace CoreviaWP\Core;
 
 defined( 'ABSPATH' ) || exit;
 
