@@ -10,21 +10,21 @@ $submenus          = isset( $active_menu['submenus'] ) && is_array( $active_menu
 $active_submenu_id = isset( $_GET['submenu'] ) && array_key_exists( $_GET['submenu'], $submenus ) ? sanitize_key( $_GET['submenu'] ) : array_key_first( $submenus );
 
 $admin_menu   = admin_url( 'admin.php' );
-$option_key   = "thrail-wp-{$active_menu_id}-{$active_submenu_id}";
+$option_key   = "corevia-wp-{$active_menu_id}-{$active_submenu_id}";
 $saved_option = get_option( $option_key );
 
 ?>
-<div id="thrail-wp-settings-wrap">
+<div id="corevia-wp-settings-wrap">
 	
-	<div id="thrail-wp-settings-header">
-		<h2><?php esc_html_e( 'Corevia WP', 'thrail-wp' ); ?></h2>
+	<div id="corevia-wp-settings-header">
+		<h2><?php esc_html_e( 'Corevia WP', 'corevia-wp' ); ?></h2>
 	</div>
 
-	<div id="thrail-wp-settings-body">
+	<div id="corevia-wp-settings-body">
 
-		<div id="thrail-wp-settings-sidebar">
-			<div id="thrail-wp-settings-menus">
-				<ul id="thrail-wp-settings-menus-list">
+		<div id="corevia-wp-settings-sidebar">
+			<div id="corevia-wp-settings-menus">
+				<ul id="corevia-wp-settings-menus-list">
 				<?php
 				foreach ( $menus as $menu_id => $menu ) {
 					printf(
@@ -34,7 +34,7 @@ $saved_option = get_option( $option_key );
 						esc_url(
 							add_query_arg(
 								array(
-									'page' => 'thrail-wp-settings',
+									'page' => 'corevia-wp-settings',
 									'menu' => $menu_id,
 								),
 								$admin_menu
@@ -48,23 +48,23 @@ $saved_option = get_option( $option_key );
 			</div>
 		</div>
 
-		<div id="thrail-wp-settings-content">
-			<form class="thrail-wp-settings-form" data-option_key="<?php echo esc_attr( $option_key ); ?>" id="" method="post">
+		<div id="corevia-wp-settings-content">
+			<form class="corevia-wp-settings-form" data-option_key="<?php echo esc_attr( $option_key ); ?>" id="" method="post">
 
-				<div id="thrail-wp-settings-content-header">
-					<div id="thrail-wp-settings-content-label">
+				<div id="corevia-wp-settings-content-header">
+					<div id="corevia-wp-settings-content-label">
 						<h3><?php echo esc_html( $active_menu['label'] ); ?></h3>
 					</div>
 
-					<div id="thrail-wp-settings-content-actions">
-						<input type="reset" class="button" value="<?php esc_attr_e( 'Reset Settings', 'thrail-wp' ); ?>">
-						<input type="submit" class="button" value="<?php esc_attr_e( 'Save Settings', 'thrail-wp' ); ?>">
+					<div id="corevia-wp-settings-content-actions">
+						<input type="reset" class="button" value="<?php esc_attr_e( 'Reset Settings', 'corevia-wp' ); ?>">
+						<input type="submit" class="button" value="<?php esc_attr_e( 'Save Settings', 'corevia-wp' ); ?>">
 					</div>
 				</div>
 
 				<?php if ( count( $submenus ) > 1 ) : ?>
-				<div id="thrail-wp-settings-submenus">
-					<ul id="thrail-wp-settings-submenus-list">
+				<div id="corevia-wp-settings-submenus">
+					<ul id="corevia-wp-settings-submenus-list">
 					<?php
 					foreach ( $submenus as $submenu_id => $submenu ) {
 						printf(
@@ -74,7 +74,7 @@ $saved_option = get_option( $option_key );
 							esc_url(
 								add_query_arg(
 									array(
-										'page'    => 'thrail-wp-settings',
+										'page'    => 'corevia-wp-settings',
 										'menu'    => $active_menu_id,
 										'submenu' => $submenu_id,
 									),
@@ -89,19 +89,19 @@ $saved_option = get_option( $option_key );
 				</div>
 				<?php endif; ?>
 
-				<div id="thrail-wp-settings-sections">
+				<div id="corevia-wp-settings-sections">
 					<?php
 					$sections = $menus[ $active_menu_id ]['submenus'][ $active_submenu_id ]['sections'] ?? array();
 
 					foreach ( $sections as $section_id => $section ) {
-						printf( '<div class="thrail-wp-settings-section" id="thrail-wp-settings-section-%1$s">', esc_attr( $section_id ) );
+						printf( '<div class="corevia-wp-settings-section" id="corevia-wp-settings-section-%1$s">', esc_attr( $section_id ) );
 
 						if ( ! empty( $section['label'] ) ) {
-							printf( '<h2 class="thrail-wp-settings-section-heading">%1$s</h2>', esc_html( $section['label'] ) );
+							printf( '<h2 class="corevia-wp-settings-section-heading">%1$s</h2>', esc_html( $section['label'] ) );
 						}
 
 						if ( ! empty( $section['desc'] ) ) {
-							printf( '<p class="thrail-wp-settings-section-desc">%1$s</p>', esc_html( $section['desc'] ) );
+							printf( '<p class="corevia-wp-settings-section-desc">%1$s</p>', esc_html( $section['desc'] ) );
 						}
 
 						foreach ( $section['fields'] as $field ) {
@@ -117,7 +117,7 @@ $saved_option = get_option( $option_key );
 							}
 						}
 
-						printf( '<input type="submit" class="button" value="%1$s">', esc_attr( __( 'Save Settings', 'thrail-wp' ) ) );
+						printf( '<input type="submit" class="button" value="%1$s">', esc_attr( __( 'Save Settings', 'corevia-wp' ) ) );
 
 						printf( '</div><!-- #%1$s -->', esc_attr( $section_id ) );
 					}

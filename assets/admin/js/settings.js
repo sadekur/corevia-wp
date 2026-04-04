@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-	$('.thrail-wp-settings-form').on('reset', function(e){
+	$('.corevia-wp-settings-form').on('reset', function(e){
 		e.preventDefault();
 		thrailwp_modal();
 	    
@@ -25,7 +25,7 @@ jQuery(function($) {
 	    });
 	});
 
-	$('.thrail-wp-settings-form').submit(function(e){
+	$('.corevia-wp-settings-form').submit(function(e){
 		e.preventDefault();
 		thrailwp_modal();
 

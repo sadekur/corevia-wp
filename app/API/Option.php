@@ -20,13 +20,13 @@ class Option {
 		$key = $request->get_param( 'key' );
 
 		if ( empty( $key ) ) {
-			return $this->response_error( __( 'Option key is required.', 'thrail-wp' ) );
+			return $this->response_error( __( 'Option key is required.', 'corevia-wp' ) );
 		}
 
 		$value = get_option( $key );
 
 		// if ( empty( $value ) ) {
-		// return $this->response_error( __( 'Option not found.', 'thrail-wp' ) );
+		// return $this->response_error( __( 'Option not found.', 'corevia-wp' ) );
 		// }
 
 		return $this->response_success( $value );
@@ -43,16 +43,16 @@ class Option {
 		$value = $request->get_param( 'value' );
 
 		if ( empty( $key ) || empty( $value ) ) {
-			return $this->response_error( __( 'Option key and value are required.', 'thrail-wp' ) );
+			return $this->response_error( __( 'Option key and value are required.', 'corevia-wp' ) );
 		}
 
 		$updated = update_option( $key, $value );
 
 		if ( ! $updated ) {
-			return $this->response_success( __( 'Option not updated.', 'thrail-wp' ) );
+			return $this->response_success( __( 'Option not updated.', 'corevia-wp' ) );
 		}
 
-		return $this->response_success( __( 'Option updated successfully.', 'thrail-wp' ) );
+		return $this->response_success( __( 'Option updated successfully.', 'corevia-wp' ) );
 	}
 
 	/**
@@ -65,15 +65,15 @@ class Option {
 		$key = $request->get_param( 'key' );
 
 		if ( empty( $key ) ) {
-			return $this->response_error( __( 'Option key is required.', 'thrail-wp' ) );
+			return $this->response_error( __( 'Option key is required.', 'corevia-wp' ) );
 		}
 
 		$deleted = delete_option( $key );
 
 		if ( ! $deleted ) {
-			return $this->response_error( __( 'Failed to delete option.', 'thrail-wp' ) );
+			return $this->response_error( __( 'Failed to delete option.', 'corevia-wp' ) );
 		}
 
-		return $this->response_success( __( 'Option deleted successfully.', 'thrail-wp' ) );
+		return $this->response_success( __( 'Option deleted successfully.', 'corevia-wp' ) );
 	}
 }

@@ -23,15 +23,15 @@ class Init {
 
 	public function modal() {
 		echo '
-		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( COREVIAWP_ASSETS_URL . 'common/img/loader.gif' ) . '" />
+		<div id="corevia-wp-modal" style="display: none">
+			<img id="corevia-wp-modal-loader" src="' . esc_attr( COREVIAWP_ASSETS_URL . 'common/img/loader.gif' ) . '" />
 		</div>';
 	}
 
 	public function add_assets() {
 		global $current_screen;
 
-		if ( isset( $current_screen->base ) && strpos( $current_screen->base, 'thrail-wp' ) !== false || ! is_admin() ) {
+		if ( isset( $current_screen->base ) && strpos( $current_screen->base, 'corevia-wp' ) !== false || ! is_admin() ) {
 
 			$this->enqueue_script(
 				'tailwind-css',

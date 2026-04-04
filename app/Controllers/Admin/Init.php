@@ -32,7 +32,7 @@ class Init {
 			'THRAILWP_PLUGIN_ADMIN',
 			array(
 				'menus'    => $thrailwp_menus,
-				'api_base' => rest_url( 'thrail-wp/v1' ),
+				'api_base' => rest_url( 'corevia-wp/v1' ),
 				'nonce'    => wp_create_nonce( 'wp_rest' ),
 			)
 		);

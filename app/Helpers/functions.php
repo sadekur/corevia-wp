@@ -21,28 +21,28 @@ function thrailwp_settings_menus() {
 		'thrailwp_settings_menus',
 		array(
 			'general' => array(
-				'label'    => __( 'General', 'thrail-wp' ),
-				'desc'     => __( 'General settings', 'thrail-wp' ),
+				'label'    => __( 'General', 'corevia-wp' ),
+				'desc'     => __( 'General settings', 'corevia-wp' ),
 				'icon'     => '',
 				'submenus' => array(
 					'pages' => array(
-						'label'    => __( 'Pages', 'thrail-wp' ),
-						'desc'     => __( 'Page Settings', 'thrail-wp' ),
+						'label'    => __( 'Pages', 'corevia-wp' ),
+						'desc'     => __( 'Page Settings', 'corevia-wp' ),
 						'sections' => array(
 							'main_pages' => array(
-								'label'  => __( 'Main Pages', 'thrail-wp' ),
-								'desc'   => __( 'Main Pages Settings', 'thrail-wp' ),
+								'label'  => __( 'Main Pages', 'corevia-wp' ),
+								'desc'   => __( 'Main Pages Settings', 'corevia-wp' ),
 								'fields' => array(
 									array(
 										'id'      => 'homepage',
 										'type'    => 'select',
-										'label'   => __( 'Homepage', 'thrail-wp' ),
+										'label'   => __( 'Homepage', 'corevia-wp' ),
 										'options' => $pages,
 									),
 									array(
 										'id'      => 'landing_page',
 										'type'    => 'select',
-										'label'   => __( 'Landing Page', 'thrail-wp' ),
+										'label'   => __( 'Landing Page', 'corevia-wp' ),
 										'options' => $pages,
 									),
 								),
@@ -52,80 +52,80 @@ function thrailwp_settings_menus() {
 				),
 			),
 			'email'   => array(
-				'label'    => __( 'Email', 'thrail-wp' ),
-				'desc'     => __( 'Email settings', 'thrail-wp' ),
+				'label'    => __( 'Email', 'corevia-wp' ),
+				'desc'     => __( 'Email settings', 'corevia-wp' ),
 				'icon'     => '',
 				'submenus' => array(
 					'new_ticket'    => array(
-						'label'    => __( 'New Ticket', 'thrail-wp' ),
-						'desc'     => __( 'New Ticket Notification', 'thrail-wp' ),
+						'label'    => __( 'New Ticket', 'corevia-wp' ),
+						'desc'     => __( 'New Ticket Notification', 'corevia-wp' ),
 						'sections' => array(
 							'agent_email'  => array(
-								'label'  => __( 'Agent Email', 'thrail-wp' ),
-								'desc'   => __( 'Email to an Agent', 'thrail-wp' ),
+								'label'  => __( 'Agent Email', 'corevia-wp' ),
+								'desc'   => __( 'Email to an Agent', 'corevia-wp' ),
 								'fields' => array(
 									array(
 										'id'    => 'agent_header',
 										'type'  => 'text',
-										'label' => __( 'Header', 'thrail-wp' ),
+										'label' => __( 'Header', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'agent_subject',
 										'type'  => 'text',
-										'label' => __( 'Subject', 'thrail-wp' ),
+										'label' => __( 'Subject', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'agent_body',
 										'type'  => 'wysiwyg',
-										'label' => __( 'Body', 'thrail-wp' ),
+										'label' => __( 'Body', 'corevia-wp' ),
 									),
 								),
 							),
 							'client_email' => array(
-								'label'  => __( 'Client Email', 'thrail-wp' ),
-								'desc'   => __( 'Email to a Client', 'thrail-wp' ),
+								'label'  => __( 'Client Email', 'corevia-wp' ),
+								'desc'   => __( 'Email to a Client', 'corevia-wp' ),
 								'fields' => array(
 									array(
 										'id'    => 'client_header',
 										'type'  => 'text',
-										'label' => __( 'Header', 'thrail-wp' ),
+										'label' => __( 'Header', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'client_subject',
 										'type'  => 'text',
-										'label' => __( 'Subject', 'thrail-wp' ),
+										'label' => __( 'Subject', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'client_body',
 										'type'  => 'wysiwyg',
-										'label' => __( 'Body', 'thrail-wp' ),
+										'label' => __( 'Body', 'corevia-wp' ),
 									),
 								),
 							),
 						),
 					),
 					'agent_replied' => array(
-						'label'    => __( 'Agent Reply', 'thrail-wp' ),
-						'desc'     => __( 'Agent Reply Notification', 'thrail-wp' ),
+						'label'    => __( 'Agent Reply', 'corevia-wp' ),
+						'desc'     => __( 'Agent Reply Notification', 'corevia-wp' ),
 						'sections' => array(
 							'agent_email_reply' => array(
-								'label'  => __( 'Agent Reply Email', 'thrail-wp' ),
-								'desc'   => __( 'Email to a Client', 'thrail-wp' ),
+								'label'  => __( 'Agent Reply Email', 'corevia-wp' ),
+								'desc'   => __( 'Email to a Client', 'corevia-wp' ),
 								'fields' => array(
 									array(
 										'id'    => 'client_header',
 										'type'  => 'text',
-										'label' => __( 'Header', 'thrail-wp' ),
+										'label' => __( 'Header', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'client_subject',
 										'type'  => 'text',
-										'label' => __( 'Subject', 'thrail-wp' ),
+										'label' => __( 'Subject', 'corevia-wp' ),
 									),
 									array(
 										'id'    => 'client_body',
 										'type'  => 'wysiwyg',
-										'label' => __( 'Body', 'thrail-wp' ),
+										'label' => __( 'Body', 'corevia-wp' ),
 									),
 								),
 							),

@@ -25,7 +25,7 @@ class Menu {
 	public function add_assets() {
 		global $current_screen;
 
-		if ( strpos( $current_screen->base, 'thrail-wp' ) !== false ) {
+		if ( strpos( $current_screen->base, 'corevia-wp' ) !== false ) {
 
 			$this->enqueue_script(
 				'thrail-wp_main-menu',
@@ -34,7 +34,7 @@ class Menu {
 			);
 		}
 
-		if ( strpos( $current_screen->base, 'thrail-wp' ) !== false ) {
+		if ( strpos( $current_screen->base, 'corevia-wp' ) !== false ) {
 
 			$this->enqueue_style(
 				'thrail-wp_settings',
@@ -50,39 +50,39 @@ class Menu {
 
 	public function register() {
 		$this->add_menu(
-			__( 'Corevia WP', 'thrail-wp' ),
-			__( 'Corevia WP', 'thrail-wp' ),
+			__( 'Corevia WP', 'corevia-wp' ),
+			__( 'Corevia WP', 'corevia-wp' ),
 			'manage_options',
-			'thrail-wp',
+			'corevia-wp',
 			array( $this, 'callback_main_menu' ),
 			'dashicons-wordpress',
 			2
 		);
 
 		$this->add_submenu(
-			'thrail-wp',
-			__( 'Dashboard', 'thrail-wp' ),
-			__( 'Dashboard', 'thrail-wp' ),
+			'corevia-wp',
+			__( 'Dashboard', 'corevia-wp' ),
+			__( 'Dashboard', 'corevia-wp' ),
 			'manage_options',
-			'thrail-wp',
+			'corevia-wp',
 			function () {}
 		);
 
 		$this->add_submenu(
-			'thrail-wp',
-			__( 'Help', 'thrail-wp' ),
-			__( 'Help', 'thrail-wp' ),
+			'corevia-wp',
+			__( 'Help', 'corevia-wp' ),
+			__( 'Help', 'corevia-wp' ),
 			'manage_options',
-			'thrail-wp#/help',
+			'corevia-wp#/help',
 			function () {}
 		);
 
 		$this->add_submenu(
-			'thrail-wp',
-			__( 'Settings', 'thrail-wp' ),
-			__( 'Settings', 'thrail-wp' ),
+			'corevia-wp',
+			__( 'Settings', 'corevia-wp' ),
+			__( 'Settings', 'corevia-wp' ),
 			'manage_options',
-			'thrail-wp-settings',
+			'corevia-wp-settings',
 			array( $this, 'callback_submenu' ),
 		);
 	}
@@ -94,7 +94,7 @@ class Menu {
 				<div id="thrail-wp_render">%2$s</div>
 			</div>',
 			'Corevia WP',
-			__( 'Loading..', 'thrail-wp' )
+			__( 'Loading..', 'corevia-wp' )
 		);
 	}
 

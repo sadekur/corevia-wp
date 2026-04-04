@@ -41,7 +41,7 @@ class Utility {
 			$message = json_encode( $message );
 		}
 
-		if ( ! file_exists( $log_path = WP_CONTENT_DIR . '/thrail-wp-logs/' . $log_file ) ) {
+		if ( ! file_exists( $log_path = WP_CONTENT_DIR . '/corevia-wp-logs/' . $log_file ) ) {
 			$wp_filesystem->mkdir( dirname( $log_path ) );
 			$wp_filesystem->put_contents( $log_path, '', FS_CHMOD_FILE );
 		}
@@ -123,7 +123,7 @@ class Utility {
 		$_args = wp_parse_args( $args, $defaults );
 
 		// use cache
-		if ( true === $show_cached && ( $cached_posts = wp_cache_get( "thrail-wp_{$_args['post_type']}", 'thrail-wp' ) ) ) {
+		if ( true === $show_cached && ( $cached_posts = wp_cache_get( "thrail-wp_{$_args['post_type']}", 'corevia-wp' ) ) ) {
 			$posts = $cached_posts;
 		}
 
@@ -136,17 +136,17 @@ class Utility {
 				$posts[ $post->ID ] = $post->post_title;
 			endforeach;
 
-			wp_cache_add( "thrail-wp_{$_args['post_type']}", $posts, 'thrail-wp', 3600 );
+			wp_cache_add( "thrail-wp_{$_args['post_type']}", $posts, 'corevia-wp', 3600 );
 		}
 
-		$posts = $show_heading ? array( '' => sprintf( __( '- Choose a %s -', 'thrail-wp' ), $_args['post_type'] ) ) + $posts : $posts;
+		$posts = $show_heading ? array( '' => sprintf( __( '- Choose a %s -', 'corevia-wp' ), $_args['post_type'] ) ) + $posts : $posts;
 
 		return apply_filters( 'thrail-wp_get_posts', $posts, $_args );
 	}
 
 	public static function get_option( $option, $section, $field, $default = '' ) {
 
-		$key     = "thrail-wp-{$option}-{$section}";
+		$key     = "corevia-wp-{$option}-{$section}";
 		$options = get_option( $key );
 
 		if ( isset( $options[ $field ] ) ) {

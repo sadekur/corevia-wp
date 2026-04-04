@@ -1,5 +1,5 @@
 const thrailwp_modal = ( show = true ) => {
-	const modal = document.getElementById( 'thrail-wp-modal' );
+	const modal = document.getElementById( 'corevia-wp-modal' );
 	if ( show ) {
 		modal.style.display = '';
 	} else {

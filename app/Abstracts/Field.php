@@ -272,7 +272,7 @@ abstract class Field {
 	 * @return string
 	 */
 	public function get_field_id() {
-		return 'thrail-wp-field-' . $this->id;
+		return 'corevia-wp-field-' . $this->id;
 	}
 
 	/**
@@ -281,7 +281,7 @@ abstract class Field {
 	 * @return string
 	 */
 	public function get_field_class() {
-		return 'thrail-wp-field thrail-wp-field-' . $this->type;
+		return 'corevia-wp-field corevia-wp-field-' . $this->type;
 	}
 
 	/**
@@ -290,7 +290,7 @@ abstract class Field {
 	 * @return string
 	 */
 	public function get_wrapper_id() {
-		return 'thrail-wp-field-wrapper-' . $this->id;
+		return 'corevia-wp-field-wrapper-' . $this->id;
 	}
 
 	/**
@@ -299,7 +299,7 @@ abstract class Field {
 	 * @return string
 	 */
 	public function get_wrapper_class() {
-		return 'thrail-wp-field-wrapper thrail-wp-field-wrapper-' . $this->type . ' ' . $this->class;
+		return 'corevia-wp-field-wrapper corevia-wp-field-wrapper-' . $this->type . ' ' . $this->class;
 	}
 
 	/**
