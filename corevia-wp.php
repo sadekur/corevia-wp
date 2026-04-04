@@ -41,8 +41,8 @@ require_once 'vendor/autoload.php';
  * It installs necessary database tables, sets initial seeds, 
  * and checks database versions.
  */
-register_activation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\thrailwp_install' );
-function thrailwp_install() {
+register_activation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_install' );
+function coreviawp_install() {
 	Bootstrap\Installer::install();
 }
 
@@ -52,8 +52,8 @@ function thrailwp_install() {
  * It uninstalls necessary database tables, sets initial seeds, 
  * and checks database versions.
  */
-register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\thrailwp_uninstall' );
-function thrailwp_uninstall() {
+register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\coreviawp_uninstall' );
+function coreviawp_uninstall() {
 	Bootstrap\Uninstaller::uninstall();
 }
 
