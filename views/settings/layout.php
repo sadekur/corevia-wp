@@ -1,5 +1,5 @@
 <?php
-use EasyCommerce\Helpers\Utility;
+use CoreviaWP\Helpers\Utility;
 
 $menus = coreviawp_settings_menus();
 
