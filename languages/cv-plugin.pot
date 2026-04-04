@@ -22,15 +22,15 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-msgid "https://codexpert.io"
+msgid "https://sadekurrahman.net/"
 msgstr ""
 
 #. Description of the plugin
-msgid "A Simple Plugin"
+msgid "Corevia WP plugin"
 msgstr ""
 
 #. Author of the plugin
-msgid "Codexpert, Inc"
+msgid "Sadekur Rahman"
 msgstr ""
 
 #: app/Controller/API.php:35
