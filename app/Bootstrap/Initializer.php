@@ -21,7 +21,7 @@ class Initializer {
 	 */
 	private function load_admin_controllers() {
 		if ( is_admin() ) {
-			$controller_dir = THRAILWP_PLUGIN_DIR . 'app/Controllers/Admin/';
+			$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Admin/';
 
 			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 				$class_name = basename( $file, '.php' );
@@ -39,7 +39,7 @@ class Initializer {
 	 */
 	private function load_public_controllers() {
 		if ( ! is_admin() ) {
-			$controller_dir = THRAILWP_PLUGIN_DIR . 'app/Controllers/Front/';
+			$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Front/';
 
 			foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 				$class_name = basename( $file, '.php' );
@@ -56,7 +56,7 @@ class Initializer {
 	 * Initialize controllers that operate on both admin and public.
 	 */
 	private function load_common_controllers() {
-		$controller_dir = THRAILWP_PLUGIN_DIR . 'app/Controllers/Common/';
+		$controller_dir = COREVIAWP_PLUGIN_DIR . 'app/Controllers/Common/';
 
 		foreach ( glob( $controller_dir . '*.php' ) as $file ) {
 			$class_name = basename( $file, '.php' );

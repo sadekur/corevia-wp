@@ -24,7 +24,7 @@ class Init {
 	public function modal() {
 		echo '
 		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( THRAILWP_ASSETS_URL . 'common/img/loader.gif' ) . '" />
+			<img id="thrail-wp-modal-loader" src="' . esc_attr( COREVIAWP_ASSETS_URL . 'common/img/loader.gif' ) . '" />
 		</div>';
 	}
 
@@ -35,17 +35,17 @@ class Init {
 
 			$this->enqueue_script(
 				'tailwind-css',
-				THRAILWP_PLUGIN_URL . 'spa/build/tailwind.bundle.js'
+				COREVIAWP_PLUGIN_URL . 'spa/build/tailwind.bundle.js'
 			);
 
 			$this->enqueue_script(
 				'thrail-wp_common',
-				THRAILWP_ASSETS_URL . 'common/js/init.js'
+				COREVIAWP_ASSETS_URL . 'common/js/init.js'
 			);
 
 			$this->enqueue_style(
 				'thrail-wp_common',
-				THRAILWP_ASSETS_URL . 'common/css/init.css'
+				COREVIAWP_ASSETS_URL . 'common/css/init.css'
 			);
 		}
 	}

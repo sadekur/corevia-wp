@@ -11,7 +11,7 @@ trait Asset {
 	 * @param string $handle    Script handle.
 	 * @param string $src       Script source URL.
 	 * @param array  $deps      Script dependencies.
-	 * @param string $ver       Script version, defaults to the constant THRAILWP_VERSION.
+	 * @param string $ver       Script version, defaults to the constant COREVIAWP_VERSION.
 	 * @param bool   $args      Optional arguments.
 	 */
 	public function register_script( $handle, $src, $deps = array(), $ver = null, $args = array() ) {
@@ -29,7 +29,7 @@ trait Asset {
 	 * @param string $handle    Script handle.
 	 * @param string $src       Script source URL.
 	 * @param array  $deps      Script dependencies.
-	 * @param string $ver       Script version, defaults to the constant THRAILWP_VERSION.
+	 * @param string $ver       Script version, defaults to the constant COREVIAWP_VERSION.
 	 * @param bool   $args      Whether to enqueue the script in the footer.
 	 */
 	public function enqueue_script( $handle, $src, $deps = array(), $ver = null, $args = array( 'in_footer' => true ) ) {
@@ -57,7 +57,7 @@ trait Asset {
 	 * @param string $handle Style handle.
 	 * @param string $src    Style source URL.
 	 * @param array  $deps   Style dependencies.
-	 * @param string $ver    Style version, defaults to the constant THRAILWP_VERSION.
+	 * @param string $ver    Style version, defaults to the constant COREVIAWP_VERSION.
 	 * @param string $media  Media for which this stylesheet has been defined.
 	 */
 	public function register_style( $handle, $src, $deps = array(), $ver = null, $media = 'all' ) {
@@ -70,7 +70,7 @@ trait Asset {
 	 * @param string $handle Style handle.
 	 * @param string $src    Style source URL.
 	 * @param array  $deps   Style dependencies.
-	 * @param string $ver    Style version, defaults to the constant THRAILWP_VERSION.
+	 * @param string $ver    Style version, defaults to the constant COREVIAWP_VERSION.
 	 * @param string $media  Media for which this stylesheet has been defined.
 	 */
 	public function enqueue_style( $handle, $src, $deps = array(), $ver = null, $media = 'all' ) {
@@ -85,7 +85,7 @@ trait Asset {
 	 * Retrieves the correct version for enqueued assets.
 	 *
 	 * If WP_DEBUG is enabled, returns the current timestamp for cache busting.
-	 * Otherwise, returns the specified version or the THRAILWP_VERSION constant if no version is provided.
+	 * Otherwise, returns the specified version or the COREVIAWP_VERSION constant if no version is provided.
 	 *
 	 * @param string|null $version Optional. The version number to return. Default is null.
 	 *
@@ -95,7 +95,7 @@ trait Asset {
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			$version = date_i18n( 'U' );
 		} elseif ( is_null( $version ) ) {
-			$version = THRAILWP_VERSION;
+			$version = COREVIAWP_VERSION;
 		}
 
 		return $version;

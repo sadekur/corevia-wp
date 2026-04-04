@@ -29,7 +29,7 @@ class Menu {
 
 			$this->enqueue_script(
 				'thrail-wp_main-menu',
-				THRAILWP_PLUGIN_URL . 'spa/build/admin.bundle.js',
+				COREVIAWP_PLUGIN_URL . 'spa/build/admin.bundle.js',
 				array( 'wp-element', 'thrail-wp_common' )
 			);
 		}
@@ -38,12 +38,12 @@ class Menu {
 
 			$this->enqueue_style(
 				'thrail-wp_settings',
-				THRAILWP_ASSETS_URL . 'admin/css/settings.css'
+				COREVIAWP_ASSETS_URL . 'admin/css/settings.css'
 			);
 
 			$this->enqueue_script(
 				'thrail-wp_settings',
-				THRAILWP_ASSETS_URL . 'admin/js/settings.js'
+				COREVIAWP_ASSETS_URL . 'admin/js/settings.js'
 			);
 		}
 	}

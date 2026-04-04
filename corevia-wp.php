@@ -27,11 +27,11 @@ namespace ThrailWP;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'THRAILWP_FILE', __FILE__ );
-define( 'THRAILWP_VERSION', '0.9' );
-define( 'THRAILWP_PLUGIN_DIR', plugin_dir_path( THRAILWP_FILE ) );
-define( 'THRAILWP_PLUGIN_URL', plugin_dir_url( THRAILWP_FILE ) );
-define( 'THRAILWP_ASSETS_URL', THRAILWP_PLUGIN_URL . 'assets/' );
+define( 'COREVIAWP_FILE', __FILE__ );
+define( 'COREVIAWP_VERSION', '0.9' );
+define( 'COREVIAWP_PLUGIN_DIR', plugin_dir_path( COREVIAWP_FILE ) );
+define( 'COREVIAWP_PLUGIN_URL', plugin_dir_url( COREVIAWP_FILE ) );
+define( 'COREVIAWP_ASSETS_URL', COREVIAWP_PLUGIN_URL . 'assets/' );
 
 require_once 'vendor/autoload.php';
 
@@ -41,7 +41,7 @@ require_once 'vendor/autoload.php';
  * It installs necessary database tables, sets initial seeds, 
  * and checks database versions.
  */
-register_activation_hook( THRAILWP_FILE, __NAMESPACE__ . '\\thrailwp_install' );
+register_activation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\thrailwp_install' );
 function thrailwp_install() {
 	Bootstrap\Installer::install();
 }
@@ -52,7 +52,7 @@ function thrailwp_install() {
  * It uninstalls necessary database tables, sets initial seeds, 
  * and checks database versions.
  */
-register_deactivation_hook( THRAILWP_FILE, __NAMESPACE__ . '\\thrailwp_uninstall' );
+register_deactivation_hook( COREVIAWP_FILE, __NAMESPACE__ . '\\thrailwp_uninstall' );
 function thrailwp_uninstall() {
 	Bootstrap\Uninstaller::uninstall();
 }

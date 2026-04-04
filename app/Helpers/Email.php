@@ -131,7 +131,7 @@ class Email {
 	 * @param array  $args Optional. Associative array of variables to pass to the template.
 	 */
 	public function set_template( $template_name, $args = array() ) {
-		$template_path = THRAILWP_PLUGIN_DIR . 'views/emails/' . $template_name . '.php';
+		$template_path = COREVIAWP_PLUGIN_DIR . 'views/emails/' . $template_name . '.php';
 
 		if ( file_exists( $template_path ) ) {
 			if ( ! empty( $args ) && is_array( $args ) ) {

@@ -5,4 +5,4 @@ require_once $wp_dir . '/wp-load.php';
 require_once $wp_dir . '/wp-admin/includes/plugin.php';
 
 // Load the plugin file
-require_once THRAILWP_FILE;
+require_once COREVIAWP_FILE;

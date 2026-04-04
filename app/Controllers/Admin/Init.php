@@ -22,7 +22,7 @@ class Init {
 
 		$this->enqueue_script(
 			'thrail-wp_admin',
-			THRAILWP_PLUGIN_URL . 'assets/admin/js/init.js'
+			COREVIAWP_PLUGIN_URL . 'assets/admin/js/init.js'
 		);
 
 		global $thrailwp_menus;

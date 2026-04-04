@@ -90,7 +90,7 @@ class Utility {
 			$template .= '.php';
 		}
 
-		$path = THRAILWP_PLUGIN_DIR . 'views/' . $template;
+		$path = COREVIAWP_PLUGIN_DIR . 'views/' . $template;
 
 		if ( file_exists( $path ) ) {
 			if ( ! empty( $args ) && is_array( $args ) ) {
