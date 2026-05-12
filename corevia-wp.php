@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: CorevialWP
+ * Plugin Name: Corevia WP
  * Description: A Simple Broilerplate for WordPress Plugin Development.
  * Plugin URI: https://sadekurrahman.net
  * Author: Corevial, Inc
