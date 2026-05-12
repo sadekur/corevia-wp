@@ -3,7 +3,7 @@
  * Plugin Name: Corevia WP
  * Description: A Simple Broilerplate for WordPress Plugin Development.
  * Plugin URI: https://sadekurrahman.net
- * Author: Corevial, Inc
+ * Author: Sadekur Rahman
  * Author URI: https://sadekurrahman.net
  * Version: 0.9
  * Requires at least: 5.0
