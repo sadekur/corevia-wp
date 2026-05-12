@@ -9,7 +9,7 @@
  * Requires at least: 5.0
  * Tested up to: 6.3
  * Requires PHP: 7.4
- * Text Domain: corevial-wp
+ * Text Domain: corevia-wp
  * Domain Path: /languages
  *
  * CorevialWP is free software: you can redistribute it and/or modify
