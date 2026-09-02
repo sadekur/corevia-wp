@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A WordPress plugin (`corevia-wp`, PHP namespace `CoreviaWP`) with a PHP backend and a React (JSX) admin SPA. The plugin was originally scaffolded from a boilerplate called "ThrailWP" — most references were renamed to `coreviawp`/`CoreviaWP`, but a few artifacts (e.g. `readme.md`'s `wp thrailwp ...` CLI examples, some docblock `@package ThrailWP` tags) are stale leftovers with no corresponding implementation in this repo; don't trust them as working commands.
+A WordPress plugin (`corevia-wp`, PHP namespace `CoreviaWP`) with a PHP backend and a React (JSX) admin SPA. This repo is also used as a boilerplate: the `cpb` shell function (see `~/.bashrc`) clones one of its branches (`classic`/`basic`/`modern`) and does a literal string-replace of `Corevia WP` / `corevia-wp` / `CoreviaWP` / `coreviawp` / `COREVIAWP` / `A Simple Plugin` throughout the tree to rebrand it for a new plugin — so avoid introducing those exact literal strings anywhere they aren't meant to be replaced later (e.g. don't hardcode `COREVIAWP` in a context that should stay fixed).
 
 ## Commands
 

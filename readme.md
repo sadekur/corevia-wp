@@ -10,58 +10,58 @@
 
 Creates a new controller in the `app/Controller` directory.
 
-`wp thrailwp controller <ControllerName>`
+`wp coreviawp controller <ControllerName>`
 
 Example:
 
-`wp thrailwp controller Product`
+`wp coreviawp controller Product`
 
 #### Create a Model
 
 Creates a new model in the `app/Model` directory.
 
-`wp thrailwp model <ModelName>`
+`wp coreviawp model <ModelName>`
 
 Example:
 
-`wp thrailwp model User`
+`wp coreviawp model User`
 
 #### Create an Abstract Class
 
 Creates a new abstract class in the `app/Abstract` directory.
 
-`wp thrailwp abstract <AbstractClassName>`
+`wp coreviawp abstract <AbstractClassName>`
 
 Example:
 
-`wp thrailwp abstract Base`
+`wp coreviawp abstract Base`
 
 #### Create an API Class
 
 Creates a new API class in the `app/API` directory.
 
-`wp thrailwp api <ApiClassName>`
+`wp coreviawp api <ApiClassName>`
 
 Example:
 
-`wp thrailwp api Option`
+`wp coreviawp api Option`
 
 #### Create a Trait
 
 Creates a new trait in the `app/Trait` directory.
 
-`wp thrailwp trait <TraitName>`
+`wp coreviawp trait <TraitName>`
 
 Example:
 
-`wp thrailwp trait Logger`
+`wp coreviawp trait Logger`
 
 #### Create an Interface
 
 Creates a new interface in the `app/Interface` directory.
 
-`wp thrailwp interface <InterfaceName>`
+`wp coreviawp interface <InterfaceName>`
 
 Example:
 
-`wp thrailwp interface Entity`
+`wp coreviawp interface Entity`
