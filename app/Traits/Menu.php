@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * This trait provides methods to add menu and submenu pages in the WordPress admin dashboard.
  *
- * @package ThrailWP
+ * @package CoreviaWP
  */
 trait Menu {
 
