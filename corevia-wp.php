@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main class for the plugin
  * @package Plugin
- * @author Corevia <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 final class Plugin {
 	
@@ -203,7 +203,7 @@ final class Plugin {
 			 * 
 			 * @package Corevia\Plugin
 			 * 
-			 * @author Corevia <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$widget = new Widget();
 
@@ -212,7 +212,7 @@ final class Plugin {
 			 * 
 			 * @package Corevia\Plugin
 			 * 
-			 * @author Corevia <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$notice = new Notice( $this->plugin );
 
@@ -221,7 +221,7 @@ final class Plugin {
 			 * 
 			 * @package Corevia\Marketing
 			 * 
-			 * @author Corevia <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$survey = new Survey( $this->plugin );
 
@@ -230,7 +230,7 @@ final class Plugin {
 			 * 
 			 * @package Corevia\Marketing
 			 * 
-			 * @author Corevia <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$deactivator = new Deactivator( $this->plugin );
 
@@ -239,7 +239,7 @@ final class Plugin {
 			 * 
 			 * @package Corevia\Marketing
 			 * 
-			 * @author Corevia <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$feature = new Feature( $this->plugin );
 

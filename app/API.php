@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Common
- * @author Corevia <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class API extends Base {
 

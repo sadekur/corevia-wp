@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Installer
- * @author Corevia <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class Installer extends Base {
 

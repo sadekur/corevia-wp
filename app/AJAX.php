@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage AJAX
- * @author Corevia <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class AJAX extends Base {
 
