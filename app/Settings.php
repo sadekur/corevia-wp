@@ -10,7 +10,7 @@ use Codexpert\Plugin\Settings as Settings_API;
 /**
  * @package Plugin
  * @subpackage Settings
- * @author Codexpert <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class Settings extends Base {
 

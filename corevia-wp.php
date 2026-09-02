@@ -3,7 +3,7 @@
  * Plugin Name: Corevia WP
  * Description: A Simple Plugin
  * Plugin URI: https://sadekurrahman.net
- * Author: Codexpert, Inc
+ * Author: Sadekur Rahman
  * Author URI: https://sadekurrahman.net
  * Version: 0.9
  * Text Domain: corevia-wp
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main class for the plugin
  * @package Plugin
- * @author Codexpert <hi@codexpert.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 final class Plugin {
 	
@@ -149,7 +149,7 @@ final class Plugin {
 			 * 
 			 * @package Codexpert\Plugin
 			 * 
-			 * @author Codexpert <hi@codexpert.io>
+			 * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
 			 */
 			$notice = new Notice( $this->plugin );
 
