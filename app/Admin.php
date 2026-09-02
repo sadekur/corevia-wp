@@ -70,8 +70,8 @@ class Admin extends Base {
 	public function admin_menu() {
 
 		add_menu_page(
-			__( 'CorevialWP', 'base' ),
-			__( 'CorevialWP', 'base' ),
+			__( 'CoreviaWP', 'base' ),
+			__( 'CoreviaWP', 'base' ),
 			'manage_options',
 			'base',
 			function(){},
@@ -122,7 +122,7 @@ class Admin extends Base {
 	}
 
 	public function update_cache( $post_id, $post, $update ) {
-		wp_cache_delete( "thrailwp_{$post->post_type}", 'thrailwp' );
+		wp_cache_delete( "coreviawp_{$post->post_type}", 'coreviawp' );
 	}
 
 	public function footer_text( $text ) {

@@ -1,4 +1,4 @@
-let thrailwp_modal = ( show = true ) => {
+let coreviawp_modal = ( show = true ) => {
 	if(show) {
 		jQuery('#base-modal').show();
 	}

@@ -47,7 +47,7 @@ class Helper {
 		$_args = wp_parse_args( $args, $defaults );
 
 		// use cache
-		if( true === $show_cached && ( $cached_posts = wp_cache_get( "thrailwp_{$_args['post_type']}", 'thrailwp' ) ) ) {
+		if( true === $show_cached && ( $cached_posts = wp_cache_get( "coreviawp_{$_args['post_type']}", 'coreviawp' ) ) ) {
 			$posts = $cached_posts;
 		}
 
@@ -60,12 +60,12 @@ class Helper {
 				$posts[ $post->ID ] = $post->post_title;
 			endforeach;
 			
-			wp_cache_add( "thrailwp_{$_args['post_type']}", $posts, 'thrailwp', 3600 );
+			wp_cache_add( "coreviawp_{$_args['post_type']}", $posts, 'coreviawp', 3600 );
 		}
 
-		$posts = $show_heading ? [ '' => sprintf( __( '- Choose a %s -', 'thrailwp' ), $_args['post_type'] ) ] + $posts : $posts;
+		$posts = $show_heading ? [ '' => sprintf( __( '- Choose a %s -', 'coreviawp' ), $_args['post_type'] ) ] + $posts : $posts;
 
-		return apply_filters( 'thrailwp_get_posts', $posts, $_args );
+		return apply_filters( 'coreviawp_get_posts', $posts, $_args );
 	}
 
 	public static function get_terms( $args = [], $full = false ) {
@@ -126,7 +126,7 @@ class Helper {
 	public static function get_template( $slug, $base = 'views', $args = null ) {
 
 		// templates can be placed in this directory
-		$overwrite_template_dir = apply_filters( 'thrailwp_template_overwrite_dir', get_stylesheet_directory() . '/base/', $slug, $base, $args );
+		$overwrite_template_dir = apply_filters( 'coreviawp_template_overwrite_dir', get_stylesheet_directory() . '/base/', $slug, $base, $args );
 		
 		// default template directory
 		$plugin_template_dir = BASE_DIR . "/{$base}/";
