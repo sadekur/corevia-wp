@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * This trait provides methods to register REST API routes and handle JSON responses in the WordPress plugin.
  *
- * @package ThrailWP
+ * @package CoreviaWP
  */
 trait Rest {
 
