@@ -10,8 +10,8 @@ if( ! function_exists( 'get_plugin_data' ) ) {
  * 
  * @return string $url the site URL
  */
-if( ! function_exists( 'thrailwp_site_url' ) ) :
-function thrailwp_site_url() {
+if( ! function_exists( 'coreviawp_site_url' ) ) :
+function coreviawp_site_url() {
 	$url = get_bloginfo( 'url' );
 
 	return $url;

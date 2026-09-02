@@ -2,7 +2,7 @@
 /**
  * All Shortcode related functions
  */
-namespace Codexpert\ThrailWP\App;
+namespace Codexpert\CoreviaWP\App;
 use Codexpert\Plugin\Base;
 
 /**
@@ -32,6 +32,6 @@ class Shortcode extends Base {
     }
 
     public function my_shortcode() {
-        return __( 'My Shortcode', 'thrail-wp' );
+        return __( 'My Shortcode', 'corevia-wp' );
     }
 }

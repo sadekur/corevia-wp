@@ -2,8 +2,8 @@
 /**
  * All settings related functions
  */
-namespace Codexpert\ThrailWP\App;
-use Codexpert\ThrailWP\Helper;
+namespace Codexpert\CoreviaWP\App;
+use Codexpert\CoreviaWP\Helper;
 use Codexpert\Plugin\Base;
 use Codexpert\Plugin\Settings as Settings_API;
 
@@ -49,18 +49,18 @@ class Settings extends Base {
 			// 'position'   => 25,
 			// 'topnav'	=> true,
 			'sections'      => [
-				'thrail-wp_basic'	=> [
-					'id'        => 'thrail-wp_basic',
-					'label'     => __( 'Basic Settings', 'thrail-wp' ),
+				'corevia-wp_basic'	=> [
+					'id'        => 'corevia-wp_basic',
+					'label'     => __( 'Basic Settings', 'corevia-wp' ),
 					'icon'      => 'dashicons-admin-tools',
 					// 'color'		=> '#4c3f93',
 					'sticky'	=> false,
 					'fields'    => [
 						'sample_text' => [
 							'id'        => 'sample_text',
-							'label'     => __( 'Text Field', 'thrail-wp' ),
+							'label'     => __( 'Text Field', 'corevia-wp' ),
 							'type'      => 'text',
-							'desc'      => __( 'This is a text field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a text field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'default'   => 'Hello World!',
 							'readonly'  => false, // true|false
@@ -68,9 +68,9 @@ class Settings extends Base {
 						],
 						'sample_number' => [
 							'id'      => 'sample_number',
-							'label'     => __( 'Number Field', 'thrail-wp' ),
+							'label'     => __( 'Number Field', 'corevia-wp' ),
 							'type'      => 'number',
-							'desc'      => __( 'This is a number field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a number field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'default'   => 10,
 							'readonly'  => false, // true|false
@@ -78,9 +78,9 @@ class Settings extends Base {
 						],
 						'sample_email' => [
 							'id'      => 'sample_email',
-							'label'     => __( 'Email Field', 'thrail-wp' ),
+							'label'     => __( 'Email Field', 'corevia-wp' ),
 							'type'      => 'email',
-							'desc'      => __( 'This is an email field.', 'thrail-wp' ),
+							'desc'      => __( 'This is an email field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'default'   => 'john@doe.com',
 							'readonly'  => false, // true|false
@@ -88,9 +88,9 @@ class Settings extends Base {
 						],
 						'sample_url' => [
 							'id'      => 'sample_url',
-							'label'     => __( 'URL Field', 'thrail-wp' ),
+							'label'     => __( 'URL Field', 'corevia-wp' ),
 							'type'      => 'url',
-							'desc'      => __( 'This is a url field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a url field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'default'   => 'https://johndoe.com',
 							'readonly'  => false, // true|false
@@ -98,9 +98,9 @@ class Settings extends Base {
 						],
 						'sample_password' => [
 							'id'      => 'sample_password',
-							'label'     => __( 'Password Field', 'thrail-wp' ),
+							'label'     => __( 'Password Field', 'corevia-wp' ),
 							'type'      => 'password',
-							'desc'      => __( 'This is a password field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a password field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'readonly'  => false, // true|false
 							'disabled'  => false, // true|false
@@ -108,9 +108,9 @@ class Settings extends Base {
 						],
 						'sample_textarea' => [
 							'id'      => 'sample_textarea',
-							'label'     => __( 'Textarea Field', 'thrail-wp' ),
+							'label'     => __( 'Textarea Field', 'corevia-wp' ),
 							'type'      => 'textarea',
-							'desc'      => __( 'This is a textarea field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a textarea field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'columns'   => 24,
 							'rows'      => 5,
@@ -120,9 +120,9 @@ class Settings extends Base {
 						],
 						'sample_radio' => [
 							'id'      => 'sample_radio',
-							'label'     => __( 'Radio Field', 'thrail-wp' ),
+							'label'     => __( 'Radio Field', 'corevia-wp' ),
 							'type'      => 'radio',
-							'desc'      => __( 'This is a radio field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a radio field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'item_1'  => 'Item One',
@@ -134,9 +134,9 @@ class Settings extends Base {
 						],
 						'sample_select' => [
 							'id'      => 'sample_select',
-							'label'     => __( 'Select Field', 'thrail-wp' ),
+							'label'     => __( 'Select Field', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'This is a select field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a select field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -149,9 +149,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect' => [
 							'id'      => 'sample_multiselect',
-							'label'     => __( 'Multi-select Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-select Field', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'This is a multiselect field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multiselect field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -164,18 +164,18 @@ class Settings extends Base {
 						],
 						'sample_checkbox' => [
 							'id'      => 'sample_checkbox',
-							'label'     => __( 'Checkbox Field', 'thrail-wp' ),
+							'label'     => __( 'Checkbox Field', 'corevia-wp' ),
 							'type'      => 'checkbox',
-							'desc'      => __( 'This is a checkbox field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a checkbox field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'on'
 						],
 						'sample_multicheck' => [
 							'id'      => 'sample_multicheck',
-							'label'     => __( 'Multi-check Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-check Field', 'corevia-wp' ),
 							'type'      => 'checkbox',
-							'desc'      => __( 'This is a multi-check field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multi-check field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -188,18 +188,18 @@ class Settings extends Base {
 						],
 						'sample_switch' => [
 							'id'      => 'sample_switch',
-							'label'     => __( 'Switch Field', 'thrail-wp' ),
+							'label'     => __( 'Switch Field', 'corevia-wp' ),
 							'type'      => 'switch',
-							'desc'      => __( 'This is a switch field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a switch field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'on'
 						],
 						'sample_multiswitch' => [
 							'id'      => 'sample_multiswitch',
-							'label'     => __( 'Multi-switch Field', 'thrail-wp' ),
+							'label'     => __( 'Multi-switch Field', 'corevia-wp' ),
 							'type'      => 'switch',
-							'desc'      => __( 'This is a multi-switch field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a multi-switch field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -212,9 +212,9 @@ class Settings extends Base {
 						],
 						'sample_range' => [
 							'id'      => 'sample_range',
-							'label'     => __( 'Range Field', 'thrail-wp' ),
+							'label'     => __( 'Range Field', 'corevia-wp' ),
 							'type'      => 'range',
-							'desc'      => __( 'This is a range field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a range field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'min'		=> 0,
@@ -224,35 +224,35 @@ class Settings extends Base {
 						],
 						'sample_date' => [
 							'id'      => 'sample_date',
-							'label'     => __( 'Date Field', 'thrail-wp' ),
+							'label'     => __( 'Date Field', 'corevia-wp' ),
 							'type'      => 'date',
-							'desc'      => __( 'This is a date field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a date field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => '1971-12-16',
 						],
 						'sample_time' => [
 							'id'      => 'sample_time',
-							'label'     => __( 'Time Field', 'thrail-wp' ),
+							'label'     => __( 'Time Field', 'corevia-wp' ),
 							'type'      => 'time',
-							'desc'      => __( 'This is a time field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a time field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => '15:45',
 						],
 						'sample_color' => [
 							'id'      => 'sample_color',
-							'label'     => __( 'Color Field', 'thrail-wp' ),
+							'label'     => __( 'Color Field', 'corevia-wp' ),
 							'type'      => 'color',
-							'desc'      => __( 'This is a color field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a color field.', 'corevia-wp' ),
 							// 'class'     => '',
 							// 'default'   => '#f0f'
 						],
 						'sample_wysiwyg' => [
 							'id'      => 'sample_wysiwyg',
-							'label'     => __( 'WYSIWYG Field', 'thrail-wp' ),
+							'label'     => __( 'WYSIWYG Field', 'corevia-wp' ),
 							'type'      => 'wysiwyg',
-							'desc'      => __( 'This is a wysiwyg field.', 'thrail-wp' ),
+							'desc'      => __( 'This is a wysiwyg field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'width'     => '100%',
 							'rows'      => 5,
@@ -265,27 +265,27 @@ class Settings extends Base {
 							'id'      => 'sample_file',
 							'label'     => __( 'File Field' ),
 							'type'      => 'file',
-							'upload_button'     => __( 'Choose File', 'thrail-wp' ),
-							'select_button'     => __( 'Select File', 'thrail-wp' ),
-							'desc'      => __( 'This is a file field.', 'thrail-wp' ),
+							'upload_button'     => __( 'Choose File', 'corevia-wp' ),
+							'select_button'     => __( 'Select File', 'corevia-wp' ),
+							'desc'      => __( 'This is a file field.', 'corevia-wp' ),
 							// 'class'     => '',
 							'disabled'  => false, // true|false
 							'default'   => 'http://example.com/sample/file.txt'
 						],
 					]
 				],
-				'thrail-wp_advanced'	=> [
-					'id'        => 'thrail-wp_advanced',
-					'label'     => __( 'Advanced Settings', 'thrail-wp' ),
+				'corevia-wp_advanced'	=> [
+					'id'        => 'corevia-wp_advanced',
+					'label'     => __( 'Advanced Settings', 'corevia-wp' ),
 					'icon'      => 'dashicons-admin-generic',
 					// 'color'		=> '#d30c5c',
 					'sticky'	=> false,
 					'fields'    => [
 						'sample_select3' => [
 							'id'      => 'sample_select3',
-							'label'     => __( 'Select with Chosen', 'thrail-wp' ),
+							'label'     => __( 'Select with Chosen', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => Helper::get_posts( [ 'post_type' => 'page' ], false, true ),
 							'default'   => 2,
@@ -295,9 +295,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect3' => [
 							'id'      => 'sample_multiselect3',
-							'label'     => __( 'Multi-select with Chosen', 'thrail-wp' ),
+							'label'     => __( 'Multi-select with Chosen', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Chosen plugin enabled. <a href="https://harvesthq.github.io/chosen/" target="_blank">[See more]</a>', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -311,9 +311,9 @@ class Settings extends Base {
 						],
 						'sample_select2' => [
 							'id'      => 'sample_select2',
-							'label'     => __( 'Select with Select2', 'thrail-wp' ),
+							'label'     => __( 'Select with Select2', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -327,9 +327,9 @@ class Settings extends Base {
 						],
 						'sample_multiselect2' => [
 							'id'      => 'sample_multiselect2',
-							'label'     => __( 'Multi-select with Select2', 'thrail-wp' ),
+							'label'     => __( 'Multi-select with Select2', 'corevia-wp' ),
 							'type'      => 'select',
-							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'thrail-wp' ),
+							'desc'      => __( 'jQuery Select2 plugin enabled. <a href="https://select2.org/" target="_blank">[See more]</a>', 'corevia-wp' ),
 							// 'class'     => '',
 							'options'   => [
 								'option_1'  => 'Option One',
@@ -345,11 +345,11 @@ class Settings extends Base {
 							'id'      => 'sample_group',
 							'label'     => __( 'Field Group' ),
 							'type'      => 'group',
-							'desc'      => __( 'A group of fields.', 'thrail-wp' ),
+							'desc'      => __( 'A group of fields.', 'corevia-wp' ),
 							'items'     => [
 								'sample_group_select1' => [
 									'id'      => 'sample_group_select1',
-									'label'     => __( 'First Item', 'thrail-wp' ),
+									'label'     => __( 'First Item', 'corevia-wp' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -360,7 +360,7 @@ class Settings extends Base {
 								],
 								'sample_group_select2' => [
 									'id'      => 'sample_group_select2',
-									'label'     => __( 'Second Item', 'thrail-wp' ),
+									'label'     => __( 'Second Item', 'corevia-wp' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -371,7 +371,7 @@ class Settings extends Base {
 								],
 								'sample_group_select3' => [
 									'id'      => 'sample_group_select3',
-									'label'     => __( 'Third Item', 'thrail-wp' ),
+									'label'     => __( 'Third Item', 'corevia-wp' ),
 									'type'      => 'select',
 									'options'   => [
 										'option_1'  => 'Option One',
@@ -384,14 +384,14 @@ class Settings extends Base {
 						],
 						'sample_conditional' => [
 							'id'      => 'sample_conditional',
-							'label'     => __( 'Conditional Field', 'thrail-wp' ),
+							'label'     => __( 'Conditional Field', 'corevia-wp' ),
 							'type'      => 'select',
 							'options'   => [
 								'option_1'  => 'Option One',
 								'option_2'  => 'Option Two',
 								'option_3'  => 'Option Three',
 							],
-							'desc'      => __( 'Shows up if the third option in the  \'Field Group\' above is set as \'Option Two\'', 'thrail-wp' ),
+							'desc'      => __( 'Shows up if the third option in the  \'Field Group\' above is set as \'Option Two\'', 'corevia-wp' ),
 							'default'   => 'option_2',
 							'condition'	=> [
 								'key'		=> 'sample_group_select3',
@@ -406,17 +406,17 @@ class Settings extends Base {
 							'items'		=> [
 								'text_repeat' => [
 									'id'		=> 'text_repeat',
-									'label'		=> __( 'Repeat Text Field', 'thrail-wp' ),
+									'label'		=> __( 'Repeat Text Field', 'corevia-wp' ),
 									'type'		=> 'text',
-									'placeholder'=> __( 'Repeat Text', 'thrail-wp' ),
-									'desc'		=> __( 'This field will be repeated.', 'thrail-wp' ),
+									'placeholder'=> __( 'Repeat Text', 'corevia-wp' ),
+									'desc'		=> __( 'This field will be repeated.', 'corevia-wp' ),
 								],
 								'number_repeat' => [
 									'id'		=> 'number_repeat',
-									'label'		=> __( 'Repeat Number Field', 'thrail-wp' ),
+									'label'		=> __( 'Repeat Number Field', 'corevia-wp' ),
 									'type'		=> 'number',
-									'placeholder'=> __( 'Repeat Number', 'thrail-wp' ),
-									'desc'		=> __( 'This field will be repeated.', 'thrail-wp' ),
+									'placeholder'=> __( 'Repeat Number', 'corevia-wp' ),
+									'desc'		=> __( 'This field will be repeated.', 'corevia-wp' ),
 								],
 							]
 						],
@@ -427,13 +427,13 @@ class Settings extends Base {
 							'items'     => [
 								'sample_tab1' => [
 									'id'      => 'sample_tab1',
-									'label'     => __( 'First Tab', 'thrail-wp' ),
+									'label'     => __( 'First Tab', 'corevia-wp' ),
 									'fields'    => [
 										'sample_tab1_email' => [
 											'id'      => 'sample_tab1_email',
-											'label'     => __( 'Tab Email Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Email Field', 'corevia-wp' ),
 											'type'      => 'email',
-											'desc'      => __( 'This is an email field.', 'thrail-wp' ),
+											'desc'      => __( 'This is an email field.', 'corevia-wp' ),
 											// 'class'     => '',
 											'default'   => 'john@doe.com',
 											'readonly'  => false, // true|false
@@ -441,9 +441,9 @@ class Settings extends Base {
 										],
 										'sample_tab1_url' => [
 											'id'      => 'sample_tab1_url',
-											'label'     => __( 'Tab URL Field', 'thrail-wp' ),
+											'label'     => __( 'Tab URL Field', 'corevia-wp' ),
 											'type'      => 'url',
-											'desc'      => __( 'This is a url field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a url field.', 'corevia-wp' ),
 											// 'class'     => '',
 											'default'   => 'https://johndoe.com',
 											'readonly'  => false, // true|false
@@ -453,13 +453,13 @@ class Settings extends Base {
 								],
 								'sample_tab2' => [
 									'id'      => 'sample_tab2',
-									'label'     => __( 'Second Tab', 'thrail-wp' ),
+									'label'     => __( 'Second Tab', 'corevia-wp' ),
 									'fields'    => [
 										'sample_tab2_text' => [
 											'id'        => 'sample_tab2_text',
-											'label'     => __( 'Tab Text Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Text Field', 'corevia-wp' ),
 											'type'      => 'text',
-											'desc'      => __( 'This is a text field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a text field.', 'corevia-wp' ),
 											// 'class'     => '',
 											'default'   => 'Hello World!',
 											'readonly'  => false, // true|false
@@ -467,9 +467,9 @@ class Settings extends Base {
 										],
 										'sample_tab2_number' => [
 											'id'      => 'sample_tab2_number',
-											'label'     => __( 'Tab Number Field', 'thrail-wp' ),
+											'label'     => __( 'Tab Number Field', 'corevia-wp' ),
 											'type'      => 'number',
-											'desc'      => __( 'This is a number field.', 'thrail-wp' ),
+											'desc'      => __( 'This is a number field.', 'corevia-wp' ),
 											// 'class'     => '',
 											'default'   => 10,
 											'readonly'  => false, // true|false
@@ -481,24 +481,24 @@ class Settings extends Base {
 						],
 					]
 				],
-				'thrail-wp_tools'	=> [
-					'id'        => 'thrail-wp_tools',
-					'label'     => __( 'Tools', 'thrail-wp' ),
+				'corevia-wp_tools'	=> [
+					'id'        => 'corevia-wp_tools',
+					'label'     => __( 'Tools', 'corevia-wp' ),
 					'icon'      => 'dashicons-hammer',
 					'sticky'	=> false,
 					'fields'    => [
 						'enable_debug' => [
 							'id'      	=> 'enable_debug',
-							'label'     => __( 'Enable Debug', 'thrail-wp' ),
+							'label'     => __( 'Enable Debug', 'corevia-wp' ),
 							'type'      => 'switch',
-							'desc'      => __( 'Enable this if you face any CSS or JS related issues.', 'thrail-wp' ),
+							'desc'      => __( 'Enable this if you face any CSS or JS related issues.', 'corevia-wp' ),
 							'disabled'  => false,
 						],
 						'report' => [
 							'id'      => 'report',
-							'label'     => __( 'Report', 'thrail-wp' ),
+							'label'     => __( 'Report', 'corevia-wp' ),
 							'type'      => 'textarea',
-							'desc'     	=> '<button id="thrail-wp_report-copy" class="button button-primary"><span class="dashicons dashicons-admin-page"></span></button>',
+							'desc'     	=> '<button id="corevia-wp_report-copy" class="button button-primary"><span class="dashicons dashicons-admin-page"></span></button>',
 							'columns'   => 24,
 							'rows'      => 10,
 							'default'   => json_encode( $site_config, JSON_PRETTY_PRINT ),
@@ -506,13 +506,13 @@ class Settings extends Base {
 						],
 					]
 				],
-				'thrail-wp_table' => [
-					'id'        => 'thrail-wp_table',
-					'label'     => __( 'Table', 'thrail-wp' ),
+				'corevia-wp_table' => [
+					'id'        => 'corevia-wp_table',
+					'label'     => __( 'Table', 'corevia-wp' ),
 					'icon'      => 'dashicons-editor-table',
 					// 'color'		=> '#28c9ee',
 					'hide_form'	=> true,
-					'template'  => THRAILWP_DIR . '/views/settings/table.php',
+					'template'  => COREVIAWP_DIR . '/views/settings/table.php',
 				],
 			],
 		];

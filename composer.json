@@ -10,9 +10,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Codexpert\\ThrailWP\\" : "classes/",
-            "Codexpert\\ThrailWP\\App\\" : "app/",
-            "Codexpert\\ThrailWP\\API\\" : "api/"
+            "Codexpert\\CoreviaWP\\" : "classes/",
+            "Codexpert\\CoreviaWP\\App\\" : "app/",
+            "Codexpert\\CoreviaWP\\API\\" : "api/"
         },
         "files": [ "inc/functions.php" ]
     }

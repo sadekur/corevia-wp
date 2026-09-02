@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: Thrail WP
+ * Plugin Name: Corevia WP
  * Description: A Simple Plugin
  * Plugin URI: https://sadekurrahman.net
  * Author: Codexpert, Inc
  * Author URI: https://sadekurrahman.net
  * Version: 0.9
- * Text Domain: thrail-wp
+ * Text Domain: corevia-wp
  * Domain Path: /languages
  */
 
-namespace Codexpert\ThrailWP;
+namespace Codexpert\CoreviaWP;
 use Codexpert\Plugin\Notice;
 
 /**
@@ -87,10 +87,10 @@ final class Plugin {
 		 * 
 		 * @since 0.9
 		 */
-		define( 'THRAILWP', __FILE__ );
-		define( 'THRAILWP_DIR', dirname( THRAILWP ) );
-		define( 'THRAILWP_ASSET', plugins_url( 'assets', THRAILWP ) );
-		define( 'THRAILWP_DEBUG', apply_filters( 'thrail-wp_debug', true ) );
+		define( 'COREVIAWP', __FILE__ );
+		define( 'COREVIAWP_DIR', dirname( COREVIAWP ) );
+		define( 'COREVIAWP_ASSET', plugins_url( 'assets', COREVIAWP ) );
+		define( 'COREVIAWP_DEBUG', apply_filters( 'corevia-wp_debug', true ) );
 
 		/**
 		 * The plugin data
@@ -98,13 +98,13 @@ final class Plugin {
 		 * @since 0.9
 		 * @var $plugin
 		 */
-		$this->plugin					= get_plugin_data( THRAILWP );
-		$this->plugin['basename']		= plugin_basename( THRAILWP );
-		$this->plugin['file']			= THRAILWP;
-		$this->plugin['server']			= apply_filters( 'thrail-wp_server', 'https://codexpert.io/dashboard' );
+		$this->plugin					= get_plugin_data( COREVIAWP );
+		$this->plugin['basename']		= plugin_basename( COREVIAWP );
+		$this->plugin['file']			= COREVIAWP;
+		$this->plugin['server']			= apply_filters( 'corevia-wp_server', 'https://codexpert.io/dashboard' );
 		$this->plugin['min_php']		= '5.6';
 		$this->plugin['min_wp']			= '4.0';
-		$this->plugin['icon']			= THRAILWP_ASSET . '/img/icon.png';
+		$this->plugin['icon']			= COREVIAWP_ASSET . '/img/icon.png';
 		$this->plugin['depends']		= [ 'woocommerce/woocommerce.php' => 'WooCommerce' ];
 		
 	}

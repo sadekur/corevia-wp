@@ -1,4 +1,4 @@
-#thrail-wp-modal {
+#corevia-wp-modal {
     position: fixed;
     background: #c8c8c859;
     top: 0;
@@ -11,6 +11,6 @@
     justify-content: center;
     align-items: center;
 }
-#thrail-wp-modal-loader {
+#corevia-wp-modal-loader {
     position: absolute;
 }

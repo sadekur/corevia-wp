@@ -2,7 +2,7 @@
 /**
  * All common functions to load in both admin and front
  */
-namespace Codexpert\ThrailWP\App;
+namespace Codexpert\CoreviaWP\App;
 use Codexpert\Plugin\Base;
 
 /**

@@ -4,12 +4,12 @@ use Codexpert\Plugin\Table;
 $config = [
 	'per_page'		=> 5,
 	'columns'		=> [
-		'id'				=> __( 'Order #', 'thrail-wp' ),
-		'products'			=> __( 'Products', 'thrail-wp' ),
-		'order_total'		=> __( 'Order Total', 'thrail-wp' ),
-		'commission'		=> __( 'Commission', 'thrail-wp' ),
-		'payment_status'	=> __( 'Payment Status', 'thrail-wp' ),
-		'time'				=> __( 'Time', 'thrail-wp' ),
+		'id'				=> __( 'Order #', 'corevia-wp' ),
+		'products'			=> __( 'Products', 'corevia-wp' ),
+		'order_total'		=> __( 'Order Total', 'corevia-wp' ),
+		'commission'		=> __( 'Commission', 'corevia-wp' ),
+		'payment_status'	=> __( 'Payment Status', 'corevia-wp' ),
+		'time'				=> __( 'Time', 'corevia-wp' ),
 	],
 	'sortable'		=> [ 'visit', 'id', 'products', 'commission', 'payment_status', 'time' ],
 	'orderby'		=> 'time',
@@ -23,8 +23,8 @@ $config = [
 		[ 'id' => 109, 'products' => 'Rio', 'order_total' => '$211', 'commission' => '$11', 'payment_status' => 'Unpaid', 'time' => '2020-08-12' ],
 	],
 	'bulk_actions'	=> [
-		'delete'	=> __( 'Delete', 'thrail-wp' ),
-		'draft'		=> __( 'Draft', 'thrail-wp' ),
+		'delete'	=> __( 'Delete', 'corevia-wp' ),
+		'draft'		=> __( 'Draft', 'corevia-wp' ),
 	],
 ];
 

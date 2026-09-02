@@ -2,7 +2,7 @@
 /**
  * All AJAX related functions
  */
-namespace Codexpert\ThrailWP\App;
+namespace Codexpert\CoreviaWP\App;
 use Codexpert\Plugin\Base;
 
 /**

@@ -2,7 +2,7 @@
 /**
  * All admin facing functions
  */
-namespace Codexpert\ThrailWP\App;
+namespace Codexpert\CoreviaWP\App;
 use Codexpert\Plugin\Base;
 use Codexpert\Plugin\Metabox;
 
@@ -37,7 +37,7 @@ class Admin extends Base {
 	 * Internationalization
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'thrail-wp', false, THRAILWP_DIR . '/languages/' );
+		load_plugin_textdomain( 'corevia-wp', false, COREVIAWP_DIR . '/languages/' );
 	}
 
 	/**
@@ -47,12 +47,12 @@ class Admin extends Base {
 	 */
 	public function install() {
 
-		if( ! get_option( 'thrail-wp_version' ) ){
-			update_option( 'thrail-wp_version', $this->version );
+		if( ! get_option( 'corevia-wp_version' ) ){
+			update_option( 'corevia-wp_version', $this->version );
 		}
 		
-		if( ! get_option( 'thrail-wp_install_time' ) ){
-			update_option( 'thrail-wp_install_time', time() );
+		if( ! get_option( 'corevia-wp_install_time' ) ){
+			update_option( 'corevia-wp_install_time', time() );
 		}
 	}
 
@@ -60,11 +60,11 @@ class Admin extends Base {
 	 * Enqueue JavaScripts and stylesheets
 	 */
 	public function enqueue_scripts() {
-		$min = defined( 'THRAILWP_DEBUG' ) && THRAILWP_DEBUG ? '' : '.min';
+		$min = defined( 'COREVIAWP_DEBUG' ) && COREVIAWP_DEBUG ? '' : '.min';
 		
-		wp_enqueue_style( $this->slug, plugins_url( "/assets/css/admin{$min}.css", THRAILWP ), '', $this->version, 'all' );
+		wp_enqueue_style( $this->slug, plugins_url( "/assets/css/admin{$min}.css", COREVIAWP ), '', $this->version, 'all' );
 
-		wp_enqueue_script( $this->slug, plugins_url( "/assets/js/admin{$min}.js", THRAILWP ), [ 'jquery' ], $this->version, true );
+		wp_enqueue_script( $this->slug, plugins_url( "/assets/js/admin{$min}.js", COREVIAWP ), [ 'jquery' ], $this->version, true );
 	}
 
 	public function footer_text( $text ) {
@@ -75,8 +75,8 @@ class Admin extends Base {
 
 	public function modal() {
 		echo '
-		<div id="thrail-wp-modal" style="display: none">
-			<img id="thrail-wp-modal-loader" src="' . esc_attr( THRAILWP_ASSET . '/img/loader.gif' ) . '" />
+		<div id="corevia-wp-modal" style="display: none">
+			<img id="corevia-wp-modal-loader" src="' . esc_attr( COREVIAWP_ASSET . '/img/loader.gif' ) . '" />
 		</div>';
 	}
 }
